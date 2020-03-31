@@ -1,4 +1,15 @@
-site_name: Data Scinece Notes
+# project information
+site_name: XIAOYUE'S NOTES
 
+# Configuration
 theme:
   name: 'material'
+  palette:
+    primary: 'purple'
+    accent: 'pink'
+  feature:
+    tabs: false
+
+nav:
+    - Home: index.md
+    - Notes: notes.md
