@@ -10,6 +10,10 @@ theme:
   feature:
     tabs: false
 
+# Plugins
+plugins:
+  - mknotebooks
+
 nav:
-    - Home: index.md
-    - Notes: notes.md
+  - Home: index.md
+  - Notes: notes.md
