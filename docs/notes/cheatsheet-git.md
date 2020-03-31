@@ -62,25 +62,26 @@
 `git remote -v`
 `git remote rm origin`
 `git remote -v`
+- Comprare the difference between remote and local:
+`git fetch` + `git diff ...origin/master`
 
+- Comparing the difference between two versions::
+`git diff first_id second_id`
+- Comparing the difference between working directory and staging area:
+`git diff`
+- Comparing the difference between staging aread and most recent commit:
+`git diff --staged`
+- Comparing the difference between a commit and its parent:
+`git show commit_id`
 
-Comparing the difference between two versions
-git diff first_id second_id
-Comparing the difference between working directory and staging area
-git diff
-Comparing the difference between staging aread and most recent commit
-git diff --staged
-Comparing the difference between a commit and its parent
-git show commit_id
+- Cloning a Repository:
+`git clone repository_URL`
 
-Cloning a Repository
-git clone repository_URL
+- Getting Colored Output:
+`git config --global color.ui auto`
 
-Getting Colored Output
-git config --global color.ui auto
-
-Restoring to a commit temporarily
-git checkout commit_id
+- Restoring to a commit temporarily:
+`git checkout commit_id`
 
 HEAD_current commit
 Octopus_
@@ -92,18 +93,16 @@ Octopus_
 `git branch`
 
 - Delete a branch
-git branch -d branch_name
+`git branch -d branch_name`
 
 - Merge a branch
-git merge name
+`git merge name`
 If confict, make changes, then:
-git add file_name(where conflicts occur)
-git commit
+`git add file_name(where conflicts occur)`
+`git commit`
 
-
-
-Pushing a branch to the remote
-git push (to) remote_name branch_name
+- Pushing a branch to the remote
+`git push (to) remote_name branch_name`
 
 ---
 
@@ -132,3 +131,15 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 - '\$(__git_ps1)' adds git-related stuff
 - '\W' adds the name of the current directory
 export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
+
+## .gitignore
+```text
+# OSX
+.DS_Store
+
+# Environment
+.venv
+
+# Mkdocs
+/site/
+```
