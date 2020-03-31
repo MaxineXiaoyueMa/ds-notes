@@ -1,4 +1,11 @@
-site/
-.venv
+# OSX
 .DS_Store
-site/
+
+# Environments
+.venv
+
+
+# mkdocs documentation
+/site/
+
+
