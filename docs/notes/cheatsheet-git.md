@@ -64,7 +64,6 @@
 `git remote -v`
 
 
-
 Comparing the difference between two versions
 git diff first_id second_id
 Comparing the difference between working directory and staging area
