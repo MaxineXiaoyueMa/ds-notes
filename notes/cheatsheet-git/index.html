@@ -199,14 +199,14 @@
       
         <li class="md-nav__item">
   <a href="#repository" class="md-nav__link">
-    Repository:
+    Repository
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#tracking" class="md-nav__link">
-    Tracking:
+    Tracking
   </a>
   
 </li>
@@ -258,31 +258,21 @@
                 
                 <h1 id="cheatsheet-git">Cheatsheet - Git</h1>
 <p><strong>Commonly used git commands</strong></p>
-<h2 id="repository">Repository:</h2>
+<h2 id="repository">Repository</h2>
 <ul>
-<li>initialize a git repo:</li>
+<li>initialize a git repo:<ol>
 <li>cd to the directory where we want git to track Changes</li>
-<li>
-<p>Initialize the repo: <code>git init</code></p>
+<li>initialize the repo: <code>git init</code></li>
+</ol>
 </li>
-<li>
-<p>check the contents of a repository: <code>git status</code></p>
-</li>
-<li>
-<p>remove git from current directory: <code>rm -rf .git</code></p>
-</li>
+<li>check the contents of a repository: <code>git status</code></li>
+<li>remove git from current directory: <code>rm -rf .git</code></li>
 </ul>
-<h2 id="tracking">Tracking:</h2>
+<h2 id="tracking">Tracking</h2>
 <ul>
-<li>
-<p>add file/folder to staging area:<code>git add file_name</code></p>
-</li>
-<li>
-<p>remove a file that is not ready for a commit, a.k.a., undo add: <code>git reset file_name</code></p>
-</li>
-<li>
-<p>commit change: <code>git commit -m "commit message"</code></p>
-</li>
+<li>add file/folder to staging area: <code>git add file_name</code></li>
+<li>remove a file that is not ready for a commit, a.k.a., undo add: <code>git reset file_name</code></li>
+<li>commit change: <code>git commit -m "commit message"</code></li>
 <li>
 <p>rename a file in git:
 <code>git mv old_file_name new_file_name</code>
@@ -414,15 +404,21 @@ export GIT_PS1_SHOWDIRTYSTATE=1</p>
 export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"</li>
 </ul>
 <h2 id="gitignore">.gitignore</h2>
-<pre><code class="text"># OSX
-.DS_Store
-
-# Environment
-.venv
-
-# Mkdocs
-/site/
-</code></pre>
+<ul>
+<li>create .gitignore file:
+  ```text
+  # OSX
+  .DS_Store</li>
+</ul>
+<p># Environment
+  .venv</p>
+<p># Mkdocs
+  /site/
+  <code>``
+- untrack everything that is now in .gitignore:
+  1. commit all changes
+  2.  remove everything from the repo:</code>git rm -r --cached .<code>(recursively remove all files from the index)
+  3. re add everything:</code>git add .<code>4. commit:</code>git commit -m '.gitignore fix'`</p>
                 
                   
                 
