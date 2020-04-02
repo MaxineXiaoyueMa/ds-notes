@@ -1,0 +1,467 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Cheatsheet - Git - XIAOYUE'S NOTES</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ab47bc">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../../css/pandas-dataframe.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="purple" data-md-color-accent="pink">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#cheatsheet-git" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="XIAOYUE'S NOTES" aria-label="XIAOYUE'S NOTES" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              XIAOYUE'S NOTES
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Cheatsheet - Git
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="XIAOYUE'S NOTES" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    XIAOYUE'S NOTES
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Notes" class="md-nav__link">
+      Notes
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repository" class="md-nav__link">
+    Repository:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracking" class="md-nav__link">
+    Tracking:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote" class="md-nav__link">
+    Remote
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branches" class="md-nav__link">
+    branches
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilities" class="md-nav__link">
+    Utilities
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitignore" class="md-nav__link">
+    .gitignore
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="cheatsheet-git">Cheatsheet - Git</h1>
+<p><strong>Commonly used git commands</strong></p>
+<h2 id="repository">Repository:</h2>
+<ul>
+<li>initialize a git repo:</li>
+<li>cd to the directory where we want git to track Changes</li>
+<li>
+<p>Initialize the repo: <code>git init</code></p>
+</li>
+<li>
+<p>check the contents of a repository: <code>git status</code></p>
+</li>
+<li>
+<p>remove git from current directory: <code>rm -rf .git</code></p>
+</li>
+</ul>
+<h2 id="tracking">Tracking:</h2>
+<ul>
+<li>
+<p>add file/folder to staging area:<code>git add file_name</code></p>
+</li>
+<li>
+<p>remove a file that is not ready for a commit, a.k.a., undo add: <code>git reset file_name</code></p>
+</li>
+<li>
+<p>commit change: <code>git commit -m "commit message"</code></p>
+</li>
+<li>
+<p>rename a file in git:
+<code>git mv old_file_name new_file_name</code>
+<code>git commit -m 'rename file'</code>
+<code>git push origin master</code></p>
+</li>
+<li>
+<p>check git history, visualize branches :</p>
+<ul>
+<li>Viewing git log: <code>git log</code></li>
+<li>Exiting git log: press q (for quit)</li>
+<li>Viewing git log in graph form
+<code>git log --graph --abbrev-commit --pretty=oneline</code>
+<code>git log --oneline --graph</code></li>
+</ul>
+<p>where:
+  <code>--graph</code> give visualization of branches,
+  <code>--oneline</code> allows tighter and tidier presentation</p>
+<p><code>sh
+* | 7d7ee90 update readme.md
+|/
+* 2d26671 update readme.md
+* 6afe247 delete files now in .gitignore</code>
+vs. without <code>--oneline</code>
+<code>sh
+* | commit 7d7ee90df266f08201275427623d78d316e5b959
+|/  Author: Xiaoyue&lt;xxxxxxXiaoyueMa@users.noreply.github.com&gt;
+|   Date:   Fri Mar 20 18:52:23 2020 -0700
+|
+|       update readme.md
+|
+* commit 2d26671d93cfad488e18804f071d409b9dfa17ff
+| Author: Xiaoyue &lt;xxxxxxXiaoyueMa@users.noreply.github.com&gt;
+| Date:   Fri Mar 20 18:35:16 2020 -0700</code></p>
+</li>
+</ul>
+<h2 id="remote">Remote</h2>
+<ul>
+<li>Adding a remote repository: <code>git remote add origin repository_url</code></li>
+<li>update remote repo:<code>git push origin master</code></li>
+<li>Checking remote repository status:<code>git remote</code></li>
+<li>update local repo:<code>git pull origin master</code></li>
+<li>Remove a remote repository:
+<code>git remote -v</code>
+<code>git remote rm origin</code>
+<code>git remote -v</code></li>
+<li>
+<p>Comprare the difference between remote and local:
+<code>git fetch</code> + <code>git diff ...origin/master</code></p>
+</li>
+<li>
+<p>Comparing the difference between two versions::
+<code>git diff first_id second_id</code></p>
+</li>
+<li>Comparing the difference between working directory and staging area:
+<code>git diff</code></li>
+<li>Comparing the difference between staging aread and most recent commit:
+<code>git diff --staged</code></li>
+<li>
+<p>Comparing the difference between a commit and its parent:
+<code>git show commit_id</code></p>
+</li>
+<li>
+<p>Cloning a Repository:
+<code>git clone repository_URL</code></p>
+</li>
+<li>
+<p>Getting Colored Output:
+<code>git config --global color.ui auto</code></p>
+</li>
+<li>
+<p>Restoring to a commit temporarily:
+<code>git checkout commit_id</code></p>
+</li>
+</ul>
+<p>HEAD_current commit
+Octopus_</p>
+<h2 id="branches">branches</h2>
+<ul>
+<li>Create a branch
+<code>git branch branch_name</code></li>
+<li>
+<p>Checking which branch is being worked on
+<code>git branch</code></p>
+</li>
+<li>
+<p>Delete a branch
+<code>git branch -d branch_name</code></p>
+</li>
+<li>
+<p>Merge a branch
+<code>git merge name</code>
+If confict, make changes, then:
+<code>git add file_name(where conflicts occur)</code>
+<code>git commit</code></p>
+</li>
+<li>
+<p>Pushing a branch to the remote
+<code>git push (to) remote_name branch_name</code></p>
+</li>
+</ul>
+<hr />
+<p>setting up workspace recanolrence:
+https://classroom.udacity.com/courses/ud775/lessons/2980038599/concepts/33331589510923#</p>
+<p>[git config --global core.editor "'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w"
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3]</p>
+<h2 id="utilities">Utilities</h2>
+<ul>
+<li>Checking the git version: <code>git --version</code></li>
+<li>
+<p>source ~/git-completion.bash</p>
+</li>
+<li>
+<p>colors!
+green="[\033[0;32m]"
+blue="[\033[0;34m]"
+purple="[\033[0;35m]"
+reset="[\033[0m]"</p>
+</li>
+<li>
+<p>Change command prompt
+source ~/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1</p>
+</li>
+<li>'\u' adds the name of the current user to the prompt</li>
+<li>'\$(__git_ps1)' adds git-related stuff</li>
+<li>'\W' adds the name of the current directory
+export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"</li>
+</ul>
+<h2 id="gitignore">.gitignore</h2>
+<pre><code class="text"># OSX
+.DS_Store
+
+# Environment
+.venv
+
+# Mkdocs
+/site/
+</code></pre>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
