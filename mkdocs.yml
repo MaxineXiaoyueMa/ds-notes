@@ -14,6 +14,19 @@ theme:
 plugins:
   - mknotebooks
 
+
+markdown_extensions:
+  - codehilite:
+      guess_lang: false
+  - meta
+  - toc:
+      permalink: true
+
 nav:
   - Home: index.md
   - Notes: notes.md
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/MaxineXiaoyueMa/ds-notes'

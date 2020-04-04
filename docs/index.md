@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# Welcome to Xiaoyue's Notes!
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+This is an ever expanding collection of notes on **data science, machine learning, deep learning, and artifical intelligence**.
 
-## Commands
+I immensely enjoy the open source culture fostered in this field, and have learned almost everything from courses, communities, tutorials, and articles hosted online. To pay it forward, here are my two cents!
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Hope you find something useful, interesting, and/or fun here, feel free to reach out!

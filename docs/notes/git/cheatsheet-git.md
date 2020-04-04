@@ -1,22 +1,17 @@
 # Cheatsheet - Git
 **Commonly used git commands**
 
-## Repository:
+## Repository
 - initialize a git repo:
-  1. cd to the directory where we want git to track Changes
-  1. Initialize the repo: `git init`
-
+    1. cd to the directory where we want git to track Changes
+    1. initialize the repo: `git init`
 - check the contents of a repository: `git status`
-
 - remove git from current directory: `rm -rf .git`
 
-## Tracking:
-- add file/folder to staging area:`git add file_name`
-
+## Tracking
+- add file/folder to staging area: `git add file_name`
 - remove a file that is not ready for a commit, a.k.a., undo add: `git reset file_name`
-
 - commit change: `git commit -m "commit message"`
-
 - rename a file in git:
 `git mv old_file_name new_file_name`
 `git commit -m 'rename file'`
@@ -133,13 +128,19 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
 
 ## .gitignore
-```text
-# OSX
-.DS_Store
+- create .gitignore file:
+  ```text
+  # OSX
+  .DS_Store
 
-# Environment
-.venv
+  # Environment
+  .venv
 
-# Mkdocs
-/site/
-```
+  # Mkdocs
+  /site/
+  ```
+- untrack everything that is now in .gitignore:
+  1. commit all changes
+  2.  remove everything from the repo: `git rm -r --cached .` (recursively remove all files from the index)
+  3. re add everything: `git add .`
+  4. commit: `git commit -m '.gitignore fix'`
