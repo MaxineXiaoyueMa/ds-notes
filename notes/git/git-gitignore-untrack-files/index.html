@@ -31,18 +31,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
-        <title>XIAOYUE'S NOTES</title>
+        <title>Git gitignore untrack files - XIAOYUE'S NOTES</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -51,7 +51,7 @@
       
     
     
-      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
+      <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -60,14 +60,14 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="css/ansi-colours.css">
+      <link rel="stylesheet" href="../../../css/ansi-colours.css">
     
-      <link rel="stylesheet" href="css/jupyter-cells.css">
+      <link rel="stylesheet" href="../../../css/jupyter-cells.css">
     
-      <link rel="stylesheet" href="css/pandas-dataframe.css">
+      <link rel="stylesheet" href="../../../css/pandas-dataframe.css">
     
     
       
@@ -91,16 +91,12 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#welcome-to-xiaoyues-notes" tabindex="0" class="md-skip">
-        Skip to content
-      </a>
-    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="XIAOYUE'S NOTES" aria-label="XIAOYUE'S NOTES" class="md-header-nav__button md-logo">
+        <a href="../../.." title="XIAOYUE'S NOTES" aria-label="XIAOYUE'S NOTES" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -117,7 +113,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Home
+                Git gitignore untrack files
               
             </span>
           
@@ -167,7 +163,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="." title="XIAOYUE'S NOTES" class="md-nav__button md-logo">
+    <a href="../../.." title="XIAOYUE'S NOTES" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -201,20 +197,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
       Home
     </a>
-    
   </li>
 
     
@@ -224,7 +211,7 @@
 
 
   <li class="md-nav__item">
-    <a href="notes/" title="Notes" class="md-nav__link">
+    <a href="../../" title="Notes" class="md-nav__link">
       Notes
     </a>
   </li>
@@ -237,33 +224,36 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/MaxineXiaoyueMa/ds-notes/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/MaxineXiaoyueMa/ds-notes/edit/master/docs/notes/git/git-gitignore-untrack-files.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="welcome-to-xiaoyues-notes">Welcome to Xiaoyue's Notes!<a class="headerlink" href="#welcome-to-xiaoyues-notes" title="Permanent link">&para;</a></h1>
-<p>This is an ever expanding collection of notes on <strong>data science, machine learning, deep learning, and artifical intelligence</strong>.</p>
-<p>I immensely enjoy the open source culture fostered in this field, and have learned almost everything from courses, communities, tutorials, and articles hosted online. To pay it forward, here are my two cents!</p>
-<p>Hope you find something useful, interesting, and/or fun here, feel free to reach out!</p>
+                  <h1>Git gitignore untrack files</h1>
+                
+                <p>gitignore and untrack ignored files</p>
+<ol>
+<li>create .gitignore file: e.g. <code>echo .DS_Store &gt;&gt; .gitignore</code>
+  ```shell
+  # OSX
+  .DS_Store</li>
+</ol>
+<p># Environment
+  .venv</p>
+<p># Mkdocs
+  /site/
+  ```</p>
+<ol>
+<li>untrack everything that is now in .gitignore:</li>
+<li>commit all changes</li>
+<li>remove everything from the repo: <code>git rm -r --cached .</code> (recursively remove all files from the index)
+     or, remove a specific file: <code>git rm --cached some.txt</code></li>
+<li>re add everything: <code>git add .</code></li>
+<li>commit: <code>git commit -m '.gitignore fix'</code></li>
+</ol>
                 
                   
                 
@@ -282,27 +272,6 @@
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-        
-          <a href="notes/" title="Notes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Notes
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
-  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -320,9 +289,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.c33a9706.js"></script>
+      <script src="../../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
       
     
   </body>

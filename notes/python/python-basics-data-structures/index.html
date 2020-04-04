@@ -31,18 +31,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
-        <title>Python basics string basics - XIAOYUE'S NOTES</title>
+        <title>Python basics data structures - XIAOYUE'S NOTES</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+      <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -60,14 +60,14 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="../../css/ansi-colours.css">
+      <link rel="stylesheet" href="../../../css/ansi-colours.css">
     
-      <link rel="stylesheet" href="../../css/jupyter-cells.css">
+      <link rel="stylesheet" href="../../../css/jupyter-cells.css">
     
-      <link rel="stylesheet" href="../../css/pandas-dataframe.css">
+      <link rel="stylesheet" href="../../../css/pandas-dataframe.css">
     
     
       
@@ -83,13 +83,15 @@
       <defs>
         
         
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
       </defs>
     </svg>
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#creating-a-string" tabindex="0" class="md-skip">
+      <a href="#list" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -98,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="XIAOYUE'S NOTES" aria-label="XIAOYUE'S NOTES" class="md-header-nav__button md-logo">
+        <a href="../../.." title="XIAOYUE'S NOTES" aria-label="XIAOYUE'S NOTES" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -115,7 +117,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Python basics string basics
+                Python basics data structures
               
             </span>
           
@@ -124,6 +126,28 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         
       </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/MaxineXiaoyueMa/ds-notes/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    MaxineXiaoyueMa/ds-notes
+  </div>
+</a>
+          </div>
+        </div>
       
     </div>
   </nav>
@@ -143,13 +167,33 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="XIAOYUE'S NOTES" class="md-nav__button md-logo">
+    <a href="../../.." title="XIAOYUE'S NOTES" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
     XIAOYUE'S NOTES
   </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/MaxineXiaoyueMa/ds-notes/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    MaxineXiaoyueMa/ds-notes
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -159,7 +203,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
+    <a href="../../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -171,7 +215,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Notes" class="md-nav__link">
+    <a href="../../" title="Notes" class="md-nav__link">
       Notes
     </a>
   </li>
@@ -196,29 +240,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-a-string" class="md-nav__link">
-    Creating a String
+  <a href="#list" class="md-nav__link">
+    List
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#string-indexing" class="md-nav__link">
-    String Indexing
+  <a href="#tuple" class="md-nav__link">
+    Tuple
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basic-string-methods" class="md-nav__link">
-    Basic String Methods
+  <a href="#dictionary" class="md-nav__link">
+    Dictionary
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#string-formatting" class="md-nav__link">
-    String Formatting
+  <a href="#set" class="md-nav__link">
+    Set
   </a>
   
 </li>
@@ -239,8 +283,10 @@
             <article class="md-content__inner md-typeset">
               
                 
+                  <a href="https://github.com/MaxineXiaoyueMa/ds-notes/edit/master/docs/notes/python/python-basics-data-structures.ipynb" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
-                  <h1>Python basics string basics</h1>
+                
+                  <h1>Python basics data structures</h1>
                 
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
@@ -274,36 +320,40 @@
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1">
-Title: Python Basics: String Basics
+Title: Python Basics: Data Structures
 Date: 2017-10-26 13:26
 Modified: 2017-10-30 13:26
 Category: Python
-Tags: python, basics, string
-Slug: python-basics-string-basics
-Authors: Xiaoyue MA
-Summary: Basic string property and operations.
+Tags: python, basics
+Slug: python-basics-data-structures
+Authors: Max
+Summary: Lists, tuples, dictionaries and sets.
 </div>
 </div></p>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h2 id="creating-a-string">Creating a String</h2>
-<p></div>
+</div>
+</div>
+
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
+<h2 id="list">List<a class="headerlink" href="#list" title="Permanent link">&para;</a></h2>
+<p><strong>ordered, mutable</strong>
+</div>
 </div></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># three ways of creating a string</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;string&#39;</span>
-<span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;string&quot;</span>
-<span class="n">c</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span>
-
-<span class="nb">print</span> <span class="n">a</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">b</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">c</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -315,37 +365,8 @@ Summary: Basic string property and operations.
 
 <div class="output_area" markdown="1">
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>string &lt;type &#39;str&#39;&gt;
-string &lt;type &#39;str&#39;&gt;
-3.14 &lt;type &#39;str&#39;&gt;
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-</div>
-</div>
-<div class="codehilite"><pre><span></span><code><span class="c1"># concatenation using &quot;+&quot;</span>
-
-<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;A &#39;</span> <span class="o">+</span> <span class="s1">&#39;sentence &#39;</span> <span class="o">+</span> <span class="s1">&#39;can &#39;</span><span class="o">+</span><span class="s1">&#39;be made&#39;</span> <span class="o">+</span> <span class="s1">&#39;like this!&#39;</span>
-<span class="nb">print</span> <span class="n">s</span>
-</code></pre></div>
-
-
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output" markdown="1">
-
-
-<div class="output_area" markdown="1">
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>A sentence can be madelike this!
+<pre>&lt;type &#39;list&#39;&gt;
+&lt;type &#39;list&#39;&gt;
 </pre>
 </div>
 </div>
@@ -356,18 +377,27 @@ string &lt;type &#39;str&#39;&gt;
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h2 id="string-indexing">String Indexing</h2>
-<p></div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
+<h2 id="tuple">Tuple<a class="headerlink" href="#tuple" title="Permanent link">&para;</a></h2>
+<p><strong>ordered, immutable</strong>
+</div>
 </div></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># to locate a specific letter in a string</span>
-<span class="c1"># python index starts with 0</span>
-
-<span class="n">a_letter</span> <span class="o">=</span> <span class="s1">&#39;string&#39;</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> 
-<span class="nb">print</span> <span class="n">a_letter</span>
+<div class="codehilite"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">()</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -379,7 +409,8 @@ string &lt;type &#39;str&#39;&gt;
 
 <div class="output_area" markdown="1">
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>i
+<pre>&lt;type &#39;tuple&#39;&gt;
+&lt;type &#39;tuple&#39;&gt;
 </pre>
 </div>
 </div>
@@ -390,21 +421,27 @@ string &lt;type &#39;str&#39;&gt;
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h2 id="basic-string-methods">Basic String Methods</h2>
-<p></div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
+<h2 id="dictionary">Dictionary<a class="headerlink" href="#dictionary" title="Permanent link">&para;</a></h2>
+<p><strong>unordered, mutable</strong>
+</div>
 </div></p>
 </div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># Check whether the string is made of letters</span>
-
-<span class="n">n</span> <span class="o">=</span> <span class="s2">&quot;Great&quot;</span>
-<span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Gr8&quot;</span>
-
-<span class="nb">print</span> <span class="n">n</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
-<span class="nb">print</span> <span class="n">y</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;MaX&#39;</span><span class="p">,</span> <span class="s1">&#39;subject&#39;</span><span class="p">:</span> <span class="s2">&quot;Data Science&quot;</span><span class="p">}</span>
+<span class="nb">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -416,43 +453,8 @@ string &lt;type &#39;str&#39;&gt;
 
 <div class="output_area" markdown="1">
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>True
-False
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-</div>
-</div>
-<div class="codehilite"><pre><span></span><code><span class="c1"># Convert string to lower or upper cases</span>
-
-<span class="n">l</span> <span class="o">=</span> <span class="s1">&#39;lower&#39;</span>
-<span class="n">u</span> <span class="o">=</span> <span class="s1">&#39;UPPER&#39;</span>
-<span class="n">m</span> <span class="o">=</span> <span class="s1">&#39;mIxEd&#39;</span>
-
-<span class="nb">print</span> <span class="n">l</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">l</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<span class="nb">print</span> <span class="n">u</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">u</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-<span class="nb">print</span> <span class="n">m</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">m</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-</code></pre></div>
-
-
-</div>
-
-<div class="output_wrapper" markdown="1">
-<div class="output" markdown="1">
-
-
-<div class="output_area" markdown="1">
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>LOWER lower
-UPPER upper
-MIXED mixed
+<pre>&lt;type &#39;dict&#39;&gt;
+&lt;type &#39;dict&#39;&gt;
 </pre>
 </div>
 </div>
@@ -463,18 +465,26 @@ MIXED mixed
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
-<h2 id="string-formatting">String Formatting</h2>
-<p></div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="cell border-box-sizing text_cell rendered">
+<p><div class="inner_cell" markdown="1">
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
+<h2 id="set">Set<a class="headerlink" href="#set" title="Permanent link">&para;</a></h2>
+<p><strong>unordered, mutable, unique</strong>
+</div>
 </div></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># %s</span>
-<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;string&#39;</span>
-
-<span class="nb">print</span> <span class="s2">&quot;Another Way to create </span><span class="si">%s</span><span class="s2">, which is called </span><span class="si">%s</span><span class="s2"> formatting&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span> <span class="s2">&quot;FYI: </span><span class="si">%s</span><span class="s2">.&quot;</span> <span class="o">%</span><span class="p">(</span><span class="s1">&#39;https://docs.python.org/2/library/stdtypes.html#string-formatting&#39;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">}</span>
+<span class="nb">print</span> <span class="n">x</span>
+<span class="nb">print</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -486,8 +496,8 @@ MIXED mixed
 
 <div class="output_area" markdown="1">
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Another Way to create string, which is called string formatting
-FYI: https://docs.python.org/2/library/stdtypes.html#string-formatting.
+<pre>set([1, 2, 3, 4])
+&lt;type &#39;set&#39;&gt;
 </pre>
 </div>
 </div>
@@ -531,9 +541,9 @@ FYI: https://docs.python.org/2/library/stdtypes.html#string-formatting.
       
     </div>
     
-      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      <script src="../../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
       
     
   </body>
