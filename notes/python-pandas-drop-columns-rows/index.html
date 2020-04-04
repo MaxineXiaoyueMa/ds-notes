@@ -220,9 +220,10 @@
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<pre><code class="python">import pandas as pd
-from sklearn.datasets import load_iris
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+</code></pre></div>
+
 
 </div>
 
@@ -230,11 +231,12 @@ from sklearn.datasets import load_iris
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<pre><code class="python"># load dataset
-iris = load_iris()
-df = pd.DataFrame(iris.data, columns= iris.feature_names)
-df.head()
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="c1"># load dataset</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+
 
 </div>
 
@@ -325,8 +327,9 @@ df.head()
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<pre><code class="python">df.drop(0).head()
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+
 
 </div>
 
@@ -412,8 +415,9 @@ df.head()
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<pre><code class="python">df.drop([0,2,4]).head()
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+
 
 </div>
 
@@ -504,8 +508,9 @@ df.head()
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<pre><code class="python">df.drop(['sepal length (cm)'], axis = 1).head()
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;sepal length (cm)&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+
 
 </div>
 
@@ -585,8 +590,9 @@ df.head()
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
-<pre><code class="python">df.drop(['sepal length (cm)', 'sepal width (cm)'], axis = 1).head()
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;sepal length (cm)&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal width (cm)&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+
 
 </div>
 
