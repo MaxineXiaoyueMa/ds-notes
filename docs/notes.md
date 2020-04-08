@@ -3,7 +3,6 @@
 - [python - basics data types](notes/python/python-basics-data-types.ipynb)
 - [python - basics string basics](notes/python/python-basics-string-basics.ipynb)
 
-<a id = 'dataWrangling'></a>
 ## Data Wrangling
 - [pandas - drop values](notes/dataWrangling/python-pandas-drop-columns-rows.ipynb)
 - [pandas - selecting by row and column](notes/dataWrangling/python-pandas-dataframe-select-by-row-and-column.ipynb)
@@ -24,3 +23,7 @@
 ## Git
 - [git - cheatsheet](notes/git/cheatsheet-git.md)
 - [git - .gitignore and untrack files](notes/git/git-gitignore-untrack-files.md)
+- [git - add remote repository on github via commandline](notes/git/git-add-project-to-GitHub.md)
+
+## Concepts
+- [algorithm - summary](notes/concepts/algorithm-summary.md)

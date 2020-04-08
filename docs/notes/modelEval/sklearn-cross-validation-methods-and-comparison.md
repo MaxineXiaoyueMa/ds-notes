@@ -1,7 +1,7 @@
 title: sklearn-cross-validation-methods-and-comparison
 date: 2017-10-26
 
-# Sklearn Cross Validation Methods and Comparison
+# Cross-Validation Summary and Comparison
 
 ## Overview
 
@@ -132,7 +132,7 @@ print_index_for_folds(s_ss, X, y)
 
 ## train_test_Split
 
-**Useful one line wrapper for trian/test split:**
+**Useful one line wrapper for train/test split:**
 1. shuffle by default,
 2. NOT stratify by default,
 3. NO iterations.
