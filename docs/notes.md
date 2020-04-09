@@ -20,6 +20,9 @@
 ## Model Evaluation
 - [sklearn - cross validation methods and comparison](notes/modelEval/sklearn-cross-validation-methods-and-comparison.md)
 
+## Utility
+- [reproducibility - set random state](notes/utility/reproducibility-set-random-state.ipynb)
+
 ## Git
 - [git - cheatsheet](notes/git/cheatsheet-git.md)
 - [git - .gitignore and untrack files](notes/git/git-gitignore-untrack-files.md)
