@@ -12,7 +12,6 @@
 - [numpy - one hot encoding](notes/dataWrangling/python-numpy-how-to-do-one-hot-encoding.ipynb)
 - [numpy - np.sum vs. df.sum](notes/dataWrangling/numpy-sum-vs-pandas-sum)
 
-
 ## Visualization
 - [matplotlib - plt.plot basic properties](notes/visualization/matplotlib-plt.plot-basics.ipynb)
 - [matplotlib - change figure size](notes/visualization/matplotlib-plt.subplots-and-plt.figure-change-figure-size.ipynb)
@@ -27,13 +26,11 @@
 ## Utility
 - [reproducibility - set random state](notes/utility/reproducibility-set-random-state.ipynb)
 
-## Git
-- [git - cheatsheet](notes/git/cheatsheet-git.md)
-- [git - .gitignore and untrack files](notes/git/git-gitignore-untrack-files.md)
-- [git - add remote repository on github via commandline](notes/git/git-add-project-to-GitHub.md)
-
-## Concepts
-- [algorithm - summary](notes/concepts/algorithm-summary.md)
-
 ## Miscellaneous
-- [markdown - cheatsheet](notes/misc/cheatsheet-markdown.md)
+- [markdown - cheatsheet](notes/misc/markdown-cheatsheet.md)
+- [concept - algorithm summary](notes/misc/algorithm-summary.md)
+- [concept - fastai classes](notes/misc/fastai-concept-list.md)
+- [git - cheatsheet](notes/misc/git-cheatsheet.md)
+- [git - .gitignore and untrack files](notes/misc/git-gitignore-untrack-files.md)
+- [git - add remote repository on github via commandline](notes/misc/git-add-project-to-GitHub.md)
+- [platform - google cloud platform  - fastai](notes/misc/platform-google-cloud-fastai.md)
