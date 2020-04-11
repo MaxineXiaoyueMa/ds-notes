@@ -1,0 +1,368 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Fastai concepts list - XIAOYUE'S NOTES</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ab47bc">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../../../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../../../css/pandas-dataframe.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="purple" data-md-color-accent="pink">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#fasiai-library" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="XIAOYUE'S NOTES" aria-label="XIAOYUE'S NOTES" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              XIAOYUE'S NOTES
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Fastai concepts list
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="XIAOYUE'S NOTES" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    XIAOYUE'S NOTES
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Notes" class="md-nav__link">
+      Notes
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fasiai-library" class="md-nav__link">
+    fasiai library
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-modules" class="md-nav__link">
+    python modules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pathlib" class="md-nav__link">
+    pathlib
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#re" class="md-nav__link">
+    re
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Fastai concepts list</h1>
+                
+                <p>concept notes for fastai</p>
+<blockquote>
+<p>laundry list note from fastai classes with supplemental information
+most example codes are from the fast.ai notebooks
+</p>
+</blockquote>
+<h2 id="fasiai-library">fasiai library<a class="headerlink" href="#fasiai-library" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>fastai.datasets.untar_data(): download file to some convenient path, untar it, return the value of path
+<code>path = untar_data(URLs.PETS); path</code>
+fastai.vision.data()</p>
+</li>
+<li>
+<p>get_image_files(path_to_image):grab an array of image files based on extension in a path</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="n">fnames</span> <span class="o">=</span> <span class="n">get_image_files</span><span class="p">(</span><span class="n">path_to_image</span><span class="p">)</span>
+<span class="n">fnames</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</code></pre></div>
+
+
+<p><code>python
+[PosixPath('/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/american_bulldog_146.jpg'),
+ PosixPath('/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/german_shorthaired_137.jpg'),
+ PosixPath('/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/japanese_chin_139.jpg'),
+ PosixPath('/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/great_pyrenees_121.jpg'),
+ PosixPath('/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/Bombay_151.jpg')]</code>
+- DataBunch: general fastai concept for data, subclasses include ImageDataBunch, contains 2 or 3 datasets(train/val/(test)), each dataset contains images/texts/tabular data and labels
+ - <code>ImageDataBunch</code>: object,
+   - <code>ImageDataBunch.from_name_re</code>: method that extracts labels from the names
+   - <code>data = ImageDataBunch.from_name_re(path_img, fnames, pat, ds_tfms=get_transforms(), size=224, bs=bs)</code>
+      path_img: a path containing images
+      fnames: a list of file names
+      pat: a regular expression (i.e. pattern) to be used to extract the label from the file name
+      ds_tfm: we'll talk about transforms later
+      size: what size images do you want to work with.
+      bs: batch size (i.e. number of images processed at a time). Currently, 64, Set to 16 if memory is not enough.
+    - <code>data.normalize(imagenet_stats)</code>: all data about the same size
+    - <code>data.show_batch(rows = 3, figsize = (7,6))</code>: watch for borders, texts, odd rotation
+    - <code>data.classes</code>: all possible label names</p>
+<ul>
+<li>Learner: general concept for things that can learn to fit a model, subclasses include convnet learner that can create a convolutional neural network</li>
+<li><code>learn = cnn_learner(data, models.resnet34, metric = error_rate)</code> : data = a data bunch, arch = architecture, metrics is what you want to print out while training</li>
+<li><code>learn.fit_one_cycle(1)</code>: add a few extra layers to the end, and only train those</li>
+<li><code>learn.save('stage-1')</code>: save the weights names stage-1</li>
+<li><code>learn.unfreeze()</code>: train the whole model</li>
+<li><code>learn.load('stage-1')</code>: load the weights form before</li>
+<li>
+<p><code>learn.lr_find()</code>: how fast can I train without overshooting</p>
+</li>
+<li>
+<p>class interpretation</p>
+</li>
+<li><code>interp = ClassificationInterpretation.from_learner(learn)</code></li>
+<li><code>interp.plot_top_losses(9, figsize=(15,11))</code></li>
+<li><code>interp.most_confused(min_val=2)</code></li>
+</ul>
+<h2 id="python-modules">python modules<a class="headerlink" href="#python-modules" title="Permanent link">&para;</a></h2>
+<h3 id="pathlib">pathlib<a class="headerlink" href="#pathlib" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>import pathlib</code></li>
+<li>path = PosixPath('foo/bar')</li>
+<li><code>path.ls()</code>:
+  [PosixPath('/home/data/annotations'),
+  PosixPath('/home/data/images')]</li>
+<li>new_path = path/'annotations'</li>
+</ul>
+<h3 id="re">re<a class="headerlink" href="#re" title="Permanent link">&para;</a></h3>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/MaxineXiaoyueMa/ds-notes" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>
