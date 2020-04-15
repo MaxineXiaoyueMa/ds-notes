@@ -1,0 +1,345 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Cli cheatsheet - XIAOYUE'S NOTES</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ab47bc">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../../../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../../../css/pandas-dataframe.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="purple" data-md-color-accent="pink">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#commands-manipulation" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="XIAOYUE'S NOTES" aria-label="XIAOYUE'S NOTES" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              XIAOYUE'S NOTES
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Cli cheatsheet
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="XIAOYUE'S NOTES" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    XIAOYUE'S NOTES
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Notes" class="md-nav__link">
+      Notes
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#commands-manipulation" class="md-nav__link">
+    commands manipulation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-and-folderdirectory-used-interchangebaly" class="md-nav__link">
+    file and folder/directory (used interchangebaly)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-information" class="md-nav__link">
+    system information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-commands" class="md-nav__link">
+    ssh commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vim-editor" class="md-nav__link">
+    vim editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-information" class="md-nav__link">
+    disk information
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Cli cheatsheet</h1>
+                
+                <h3 id="commands-manipulation">commands manipulation<a class="headerlink" href="#commands-manipulation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>copy output of previous command: cmd+shift+a, cmd+c</li>
+</ul>
+<h3 id="file-and-folderdirectory-used-interchangebaly">file and folder/directory (used interchangebaly)<a class="headerlink" href="#file-and-folderdirectory-used-interchangebaly" title="Permanent link">&para;</a></h3>
+<ul>
+<li>create a folder: <code>mkdir folder_name</code></li>
+<li>reach/access a directory:</li>
+<li>a sub folder under the current folder: <code>cd sub-directory-name</code></li>
+<li>a specific folder: <code>cd path/to/destination/folder</code></li>
+<li>copy a file to another folder: <code>cp file-name path/to/destination/folder</code></li>
+<li>check file size within a folder: <code>ls -lh</code></li>
+</ul>
+<h3 id="system-information">system information<a class="headerlink" href="#system-information" title="Permanent link">&para;</a></h3>
+<ul>
+<li>check server time zone: <code>timedatectl</code></li>
+<li>check all available time zones: <code>timedatectl list-timezones (| grep America)</code></li>
+<li>change time zone: <code>sudo timedatectl set-timezone America/Los_Angeles</code></li>
+</ul>
+<h3 id="ssh-commands">ssh commands<a class="headerlink" href="#ssh-commands" title="Permanent link">&para;</a></h3>
+<ul>
+<li>access remote server: <code>ssh -i path/to/keypair.pem user@remote.com</code></li>
+<li>copy file to remote server: <code>scp -i path/to/keypair.pem file user@remote.com:destination</code></li>
+</ul>
+<h3 id="vim-editor">vim editor<a class="headerlink" href="#vim-editor" title="Permanent link">&para;</a></h3>
+<ul>
+<li>create a text file: <code>$ vim new_file.txt</code></li>
+<li>edit text file: <code>i</code></li>
+<li>exit or quit editing mode: <code>esc</code></li>
+<li>exit or quit file:<code>:q</code></li>
+<li>save and quit editing mode: <code>wq</code></li>
+</ul>
+<h3 id="disk-information">disk information<a class="headerlink" href="#disk-information" title="Permanent link">&para;</a></h3>
+<ul>
+<li>check disk usage:</li>
+<li><code>$ df -hT /dev/nvme0n1p1</code></li>
+<li>check disk file system: <code>sudo file -s /dev/nvme0n1p1</code></li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/MaxineXiaoyueMa/ds-notes" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>
