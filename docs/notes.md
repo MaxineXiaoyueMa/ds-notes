@@ -28,6 +28,7 @@
 
 ## Miscellaneous
 - [markdown - cheatsheet](notes/misc/markdown-cheatsheet.md)
+- [command line (cli) - cheatsheet](notes/misc/cli-cheatsheet.md)
 - [concept - algorithm summary](notes/misc/algorithm-summary.md)
 - [concept - fastai classes](notes/misc/fastai-concept-list.md)
 - [git - cheatsheet](notes/misc/git-cheatsheet.md)
