@@ -23,6 +23,8 @@
 ## Model Evaluation
 - [sklearn - cross validation methods and comparison](notes/modelEval/sklearn-cross-validation-methods-and-comparison.md)
 - [sklearn - setting hyperparameters with double asterisks](notes/modelEval/sklearn-model-setting-parameters-with-double-asterisks.md)
+- [pickle - how to save trained models and important objects](notes/modelEval/pickle-to-Save-Trained-Model.md)
+- [hyperopt - hyperparameter tuning comparison](notes/modelEval/hyperparameter-tunning-hyperopt-comparison-and-tutorial.ipynb)
 
 ## Utility
 - [reproducibility - set random state](notes/utility/reproducibility-set-random-state.ipynb)
