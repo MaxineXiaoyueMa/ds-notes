@@ -22,6 +22,7 @@
 
 ## Model Evaluation
 - [sklearn - cross validation methods and comparison](notes/modelEval/sklearn-cross-validation-methods-and-comparison.md)
+- [sklearn - setting hyperparameters with double asterisks](notes/modelEval/sklearn-model-setting-parameters-with-double-asterisks.md)
 
 ## Utility
 - [reproducibility - set random state](notes/utility/reproducibility-set-random-state.ipynb)
