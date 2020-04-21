@@ -3,6 +3,8 @@
 #### LASSO
 #### Ridge
 
+### Decision Trees
+
 ### Random Forest Regressor
 
 ### Gradient Boosted Trees Regressor
@@ -26,7 +28,16 @@ Reference: http://cs229.stanford.edu/notes/cs229-notes2.pdf
 
 ### Logistic Regression
 
-### Random Forest Classifier - discriminative model
+### Decision Trees
+1. Split criteria:
+   1. Gini Impurity: the probability of a randomly selected sample is wrongly classified
+   2. Entropy: the amount of information(surprise) enclosed
+1. Feature importance:
+   1. Gini importance: Gini impurity reduction due to each feature from each tree, averaged over all trees
+   2. Permutation importance: mean accuracy (or any other metrics) reduction due to permuting each features, averaged over all trees
+
+### Random Forest Classifier - discriminative model P(y|x)
+
 
 ### Gradient Boosted Trees
 
