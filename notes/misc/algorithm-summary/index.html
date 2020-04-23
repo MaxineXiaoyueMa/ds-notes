@@ -36,7 +36,7 @@
     
     
       
-        <title>Algorithm summary - XIAOYUE'S NOTES</title>
+        <title>Machine Learning Concept - XIAOYUE'S NOTES</title>
       
     
     
@@ -89,7 +89,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#regression" tabindex="0" class="md-skip">
+      <a href="#machine-learning-concept" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -115,7 +115,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Algorithm summary
+                Machine Learning Concept
               
             </span>
           
@@ -191,6 +191,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -204,63 +206,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#linear-regression" class="md-nav__link">
-    Linear Regression
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lasso" class="md-nav__link">
-    LASSO
+  <a href="#regression-algorithms" class="md-nav__link">
+    Regression Algorithms
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ridge" class="md-nav__link">
-    Ridge
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#decision-trees" class="md-nav__link">
-    Decision Trees
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#random-forest-regressor" class="md-nav__link">
-    Random Forest Regressor
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gradient-boosted-trees-regressor" class="md-nav__link">
-    Gradient Boosted Trees Regressor
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adaboost-regressor" class="md-nav__link">
-    Adaboost Regressor
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#support-vector-regression" class="md-nav__link">
-    Support Vector Regression
+  <a href="#regression-metrics" class="md-nav__link">
+    Regression metrics
   </a>
   
 </li>
@@ -279,56 +233,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#naive-bayes-classifier-generative-model-px-y" class="md-nav__link">
-    Naive Bayes Classifier - generative model P(x, y)
+  <a href="#classification-algorithms" class="md-nav__link">
+    Classification Algorithms
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#logistic-regression" class="md-nav__link">
-    Logistic Regression
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#decision-trees_1" class="md-nav__link">
-    Decision Trees
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#random-forest-classifier-discriminative-model-pyx" class="md-nav__link">
-    Random Forest Classifier - discriminative model P(y|x)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gradient-boosted-trees" class="md-nav__link">
-    Gradient Boosted Trees
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adaboost" class="md-nav__link">
-    Adaboost
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#support-vector-machine" class="md-nav__link">
-    Support Vector Machine
+  <a href="#classification-metrics" class="md-nav__link">
+    Classification Metrics
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unsupervised" class="md-nav__link">
+    Unsupervised
+  </a>
   
 </li>
       
@@ -349,40 +275,64 @@
               
                 
                 
-                  <h1>Algorithm summary</h1>
-                
-                <h2 id="regression">Regression<a class="headerlink" href="#regression" title="Permanent link">&para;</a></h2>
-<h3 id="linear-regression">Linear Regression<a class="headerlink" href="#linear-regression" title="Permanent link">&para;</a></h3>
-<h4 id="lasso">LASSO<a class="headerlink" href="#lasso" title="Permanent link">&para;</a></h4>
-<h4 id="ridge">Ridge<a class="headerlink" href="#ridge" title="Permanent link">&para;</a></h4>
-<h3 id="decision-trees">Decision Trees<a class="headerlink" href="#decision-trees" title="Permanent link">&para;</a></h3>
-<h3 id="random-forest-regressor">Random Forest Regressor<a class="headerlink" href="#random-forest-regressor" title="Permanent link">&para;</a></h3>
-<h3 id="gradient-boosted-trees-regressor">Gradient Boosted Trees Regressor<a class="headerlink" href="#gradient-boosted-trees-regressor" title="Permanent link">&para;</a></h3>
-<h3 id="adaboost-regressor">Adaboost Regressor<a class="headerlink" href="#adaboost-regressor" title="Permanent link">&para;</a></h3>
-<h3 id="support-vector-regression">Support Vector Regression<a class="headerlink" href="#support-vector-regression" title="Permanent link">&para;</a></h3>
+                <h1 id="machine-learning-concept">Machine Learning Concept<a class="headerlink" href="#machine-learning-concept" title="Permanent link">&para;</a></h1>
+<h2 id="regression">Regression<a class="headerlink" href="#regression" title="Permanent link">&para;</a></h2>
+<h3 id="regression-algorithms">Regression Algorithms<a class="headerlink" href="#regression-algorithms" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Linear Regression</strong>
+  <strong>LASSO</strong>
+  <strong>Ridge</strong></li>
+<li><strong>Decision Trees</strong></li>
+<li><strong>Random Forest Regressor</strong></li>
+<li><strong>Gradient Boosted Trees Regressor</strong></li>
+<li><strong>Adaboost Regressor</strong></li>
+<li><strong>Support Vector Regression</strong></li>
+</ol>
+<h3 id="regression-metrics">Regression metrics<a class="headerlink" href="#regression-metrics" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>MSE</strong>(Mean Squared Error)</li>
+<li><strong>RMSE</strong>(Root Mean Squared Error)</li>
+<li><strong>MAE</strong>(Mean Absolute Error)</li>
+<li><strong>R-Squared</strong>(Coefficient of Determination)</li>
+<li><strong>Adjusted R-Squared</strong>(Adjusted Coefficient of Determination)</li>
+</ol>
 <h2 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h2>
-<h3 id="naive-bayes-classifier-generative-model-px-y">Naive Bayes Classifier - generative model P(x, y)<a class="headerlink" href="#naive-bayes-classifier-generative-model-px-y" title="Permanent link">&para;</a></h3>
-<blockquote>
+<h3 id="classification-algorithms">Classification Algorithms<a class="headerlink" href="#classification-algorithms" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Naive Bayes Classifier</strong> - generative model P(x, y)<blockquote>
 <p>Essentially, comparing probability of having feature set X conditional on target being positive vs. negative.</p>
 </blockquote>
+</li>
+</ol>
 <p>P(y|X) = P(y&amp;X) / P(X)
 P(1-y|X) = P((1-y)&amp;X) / P(X)
 Since the denomenator is the same, compare P(y&amp;X) and P((1-y)&amp;X)</p>
 <p>Reference: http://cs229.stanford.edu/notes/cs229-notes2.pdf</p>
-<h3 id="logistic-regression">Logistic Regression<a class="headerlink" href="#logistic-regression" title="Permanent link">&para;</a></h3>
-<h3 id="decision-trees_1">Decision Trees<a class="headerlink" href="#decision-trees_1" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Split criteria:</li>
-<li>Gini Impurity: the probability of a randomly selected sample is wrongly classified</li>
-<li>Entropy: the amount of information(surprise) enclosed</li>
-<li>Feature importance:</li>
-<li>Gini importance: Gini impurity reduction due to each feature from each tree, averaged over all trees</li>
-<li>Permutation importance: mean accuracy (or any other metrics) reduction due to permuting each features, averaged over all trees</li>
+<li><strong>Logistic Regression</strong></li>
+<li><strong>Decision Trees</strong></li>
+<li><strong>Split criteria</strong>:<ol>
+<li><strong>Gini Impurity</strong>: the probability of a randomly selected sample is wrongly classified</li>
+<li><strong>Entropy</strong>: the amount of information(surprise) enclosed</li>
 </ol>
-<h3 id="random-forest-classifier-discriminative-model-pyx">Random Forest Classifier - discriminative model P(y|x)<a class="headerlink" href="#random-forest-classifier-discriminative-model-pyx" title="Permanent link">&para;</a></h3>
-<h3 id="gradient-boosted-trees">Gradient Boosted Trees<a class="headerlink" href="#gradient-boosted-trees" title="Permanent link">&para;</a></h3>
-<h3 id="adaboost">Adaboost<a class="headerlink" href="#adaboost" title="Permanent link">&para;</a></h3>
-<h3 id="support-vector-machine">Support Vector Machine<a class="headerlink" href="#support-vector-machine" title="Permanent link">&para;</a></h3>
+</li>
+<li><strong>Feature importance</strong>:<ol>
+<li><strong>Gini importance</strong>: The average of impurity reduced by each feature</li>
+<li><strong>Permutation importance</strong>: mean accuracy (or any other metrics) reduction due to permuting each features, averaged over all trees.</li>
+</ol>
+</li>
+<li><strong>Random Forest Classifier</strong> - discriminative model P(y|x)</li>
+<li><strong>Gradient Boosted Trees</strong></li>
+<li><strong>Adaboost</strong></li>
+<li><strong>Support Vector Machine</strong></li>
+</ol>
+<h3 id="classification-metrics">Classification Metrics<a class="headerlink" href="#classification-metrics" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>ROC Curve</strong>: rank observation from the most likely to least likely, a good separater will have have score
+2.<strong>Accuracy</strong>: default metric for classification models, measure how many observations are correctly classified with default threshold 0.5, not a good measure for imbalanced data, or threshold other than 0.5.</li>
+<li><strong>Precision-Recall Curve</strong>:</li>
+</ol>
+<h2 id="unsupervised">Unsupervised<a class="headerlink" href="#unsupervised" title="Permanent link">&para;</a></h2>
                 
                   
                 
