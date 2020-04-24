@@ -12,11 +12,11 @@
 6. **Support Vector Regression**
 
 ### Regression metrics
-1. **MSE**(Mean Squared Error)
-2. **RMSE**(Root Mean Squared Error)
-3. **MAE**(Mean Absolute Error)
-4. **R-Squared**(Coefficient of Determination)
-5. **Adjusted R-Squared**(Adjusted Coefficient of Determination)
+1. **MSE**(Mean Squared Error): popular metric for regression models as a loss function, calculates the average of squared error = (y truth - y prediction). Note large error's are penalized much heavier than small errors. Parameters update much faster during graident descent with this loss function at large errors.
+2. **RMSE**(Root Mean Squared Error): square root of MSE, but has same unit as predition
+3. **MAE**(Mean Absolute Error): caculate the average of the absolute value of error. Note parameter updates the same speed across error range in contrast to MSE due to linear increase of error in loss.
+4. **R-Squared**(Coefficient of Determination): the proportion of variance in y that is explained by the features. 1 - SSE(Sum of Squared Errors)/TSS(Total Sum of Squares). Default metric for regression models on sklearn.
+5. **Adjusted R-Squared**(Adjusted Coefficient of Determination): like R-Squared, but penalizes the amount of features used in prediction, is always smaller than R-Squared. 1 - (SSE/(n-k))/(TSS/(n-1))
 
 
 ## Classification
@@ -47,4 +47,8 @@ Reference: http://cs229.stanford.edu/notes/cs229-notes2.pdf
 1. **ROC Curve**: rank observation from the most likely to least likely, a good separater will have have score
 2.**Accuracy**: default metric for classification models, measure how many observations are correctly classified with default threshold 0.5, not a good measure for imbalanced data, or threshold other than 0.5.
 3. **Precision-Recall Curve**:
+
+
 ## Unsupervised
+### Clustering
+1, **KMeans**: find predetermined number of clusters. It is achieved by first pick cluster centers, then iteratively calculate euclidean distance between observations and cluter centers, assign observations to cluster centers, and recalculate cluster centers by averaging the distances of observations to corresponding cluster centers until convergence.
