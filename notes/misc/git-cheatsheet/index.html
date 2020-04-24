@@ -219,8 +219,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#branches" class="md-nav__link">
-    branches
+  <a href="#branch" class="md-nav__link">
+    Branch
   </a>
   
 </li>
@@ -228,13 +228,6 @@
         <li class="md-nav__item">
   <a href="#utilities" class="md-nav__link">
     Utilities
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gitignore" class="md-nav__link">
-    .gitignore
   </a>
   
 </li>
@@ -257,7 +250,9 @@
                 
                 
                 <h1 id="cheatsheet-git">Cheatsheet - Git<a class="headerlink" href="#cheatsheet-git" title="Permanent link">&para;</a></h1>
+<blockquote>
 <p><strong>Commonly used git commands</strong></p>
+</blockquote>
 <h2 id="repository">Repository<a class="headerlink" href="#repository" title="Permanent link">&para;</a></h2>
 <ul>
 <li>initialize a git repo:<ol>
@@ -270,9 +265,12 @@
 </ul>
 <h2 id="tracking">Tracking<a class="headerlink" href="#tracking" title="Permanent link">&para;</a></h2>
 <ul>
-<li>add file/folder to staging area: <code>git add file_name</code></li>
-<li>remove a file that is not ready for a commit, a.k.a., undo add: <code>git reset file_name</code></li>
-<li>commit change: <code>git commit -m "commit message"</code></li>
+<li>add file/folder to staging area:
+<code>git add file_name</code></li>
+<li>remove a file that is not ready for a commit, a.k.a., undo add:
+<code>git reset file_name</code></li>
+<li>commit change:
+<code>git commit -m "commit message"</code></li>
 <li>
 <p>rename a file in git:
 <code>git mv old_file_name new_file_name</code>
@@ -291,66 +289,102 @@
 <p>where:
   <code>--graph</code> give visualization of branches,
   <code>--oneline</code> allows tighter and tidier presentation</p>
-<p><code>sh
-* | 7d7ee90 update readme.md
-|/
-* 2d26671 update readme.md
-* 6afe247 delete files now in .gitignore</code>
-vs. without <code>--oneline</code>
-<code>sh
-* | commit 7d7ee90df266f08201275427623d78d316e5b959
-|/  Author: Xiaoyue&lt;xxxxxxXiaoyueMa@users.noreply.github.com&gt;
-|   Date:   Fri Mar 20 18:52:23 2020 -0700
-|
-|       update readme.md
-|
-* commit 2d26671d93cfad488e18804f071d409b9dfa17ff
-| Author: Xiaoyue &lt;xxxxxxXiaoyueMa@users.noreply.github.com&gt;
-| Date:   Fri Mar 20 18:35:16 2020 -0700</code></p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>    * <span class="p">|</span> 7d7ee90 update readme.md
+    <span class="p">|</span>/
+    * 2d26671 update readme.md
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>vs. without `--oneline`
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>    * <span class="p">|</span> commit 7d7ee90df266f08201275427623d78d316e5b959
+    <span class="p">|</span>/  Author: Xiaoyue&lt;xxxxxxXiaoyueMa@users.noreply.github.com&gt;
+    <span class="p">|</span>   Date:   Fri Mar <span class="m">20</span> <span class="m">18</span>:52:23 <span class="m">2020</span> -0700
+    <span class="p">|</span>
+    <span class="p">|</span>       update readme.md
+    <span class="p">|</span>
+    * commit 2d26671d93cfad488e18804f071d409b9dfa17ff
+    <span class="p">|</span> Author: Xiaoyue &lt;xxxxxxXiaoyueMa@users.noreply.github.com&gt;
+    <span class="p">|</span> Date:   Fri Mar <span class="m">20</span> <span class="m">18</span>:35:16 <span class="m">2020</span> -0700
+</code></pre></div>
+
+
+<ul>
+<li>
+<p>compare the difference between two versions::
+<code>git diff first_id second_id</code></p>
+</li>
+<li>
+<p>compare the difference between working directory and staging area:
+<code>git diff</code></p>
+</li>
+<li>compare the difference between staging aread and most recent commit:
+<code>git diff --staged</code></li>
+<li>
+<p>compare the difference between a commit and its parent:
+<code>git show commit_id</code></p>
+</li>
+<li>
+<p>cloning a Repository:
+<code>git clone repository_URL</code></p>
+</li>
+<li>
+<p>getting Colored Output:
+<code>git config --global color.ui auto</code></p>
+</li>
+<li>
+<p>restoring to a commit temporarily:
+<code>git checkout commit_id</code></p>
 </li>
 </ul>
 <h2 id="remote">Remote<a class="headerlink" href="#remote" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Adding a remote repository: <code>git remote add origin repository_url</code></li>
-<li>update remote repo:<code>git push origin master</code></li>
-<li>Checking remote repository status:<code>git remote</code></li>
-<li>update local repo:<code>git pull origin master</code></li>
-<li>Remove a remote repository:
+<li>
+<p>add a remote repository:
+<code>git remote add origin repository_url</code></p>
+</li>
+<li>
+<p>update/sync remote repository with local repo:
+<code>git push origin master</code></p>
+</li>
+<li>
+<p>check remote repository status:
+<code>git remote</code></p>
+</li>
+<li>
+<p>get more information on remote:
+<code>git remote show origin</code></p>
+</li>
+<li>
+<p>update/sync local repo with remote repo:
+<code>git pull origin master</code></p>
+</li>
+<li>
+<p>rename a remote repository:</p>
+</li>
+<li>rename remote repo on github,</li>
+<li>update local repo's remote url:
+  <code>git remote set-url origin new-rul</code></li>
+<li>
+<p>check remote repo url:
+<code>git config --get remote.origin.url</code></p>
+</li>
+<li>
+<p>remove a remote repository:
 <code>git remote -v</code>
 <code>git remote rm origin</code>
-<code>git remote -v</code></li>
+<code>git remote -v</code></p>
+</li>
 <li>
-<p>Comprare the difference between remote and local:
+<p>comprare the difference between remote and local:
 <code>git fetch</code> + <code>git diff ...origin/master</code></p>
 </li>
-<li>
-<p>Comparing the difference between two versions::
-<code>git diff first_id second_id</code></p>
-</li>
-<li>Comparing the difference between working directory and staging area:
-<code>git diff</code></li>
-<li>Comparing the difference between staging aread and most recent commit:
-<code>git diff --staged</code></li>
-<li>
-<p>Comparing the difference between a commit and its parent:
-<code>git show commit_id</code></p>
-</li>
-<li>
-<p>Cloning a Repository:
-<code>git clone repository_URL</code></p>
-</li>
-<li>
-<p>Getting Colored Output:
-<code>git config --global color.ui auto</code></p>
-</li>
-<li>
-<p>Restoring to a commit temporarily:
-<code>git checkout commit_id</code></p>
-</li>
 </ul>
-<p>HEAD_current commit
-Octopus_</p>
-<h2 id="branches">branches<a class="headerlink" href="#branches" title="Permanent link">&para;</a></h2>
+<h2 id="branch">Branch<a class="headerlink" href="#branch" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Create a branch
 <code>git branch branch_name</code></li>
@@ -374,51 +408,31 @@ If confict, make changes, then:
 <code>git push (to) remote_name branch_name</code></p>
 </li>
 </ul>
-<hr />
-<p>setting up workspace recanolrence:
-https://classroom.udacity.com/courses/ud775/lessons/2980038599/concepts/33331589510923#</p>
-<p>[git config --global core.editor "'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w"
-git config --global push.default upstream
-git config --global merge.conflictstyle diff3]</p>
 <h2 id="utilities">Utilities<a class="headerlink" href="#utilities" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Checking the git version: <code>git --version</code></li>
+<li>check the git version: <code>git --version</code></li>
 <li>
 <p>source ~/git-completion.bash</p>
 </li>
 <li>
-<p>colors!
-green="[\033[0;32m]"
-blue="[\033[0;34m]"
-purple="[\033[0;35m]"
-reset="[\033[0m]"</p>
+<p>colors</p>
+</li>
+<li>green="[\033[0;32m]"</li>
+<li>blue="[\033[0;34m]"</li>
+<li>purple="[\033[0;35m]"</li>
+<li>
+<p>reset="[\033[0m]"</p>
 </li>
 <li>
 <p>Change command prompt
-source ~/git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1</p>
+<code>source ~/git-prompt.sh</code>
+<code>export GIT_PS1_SHOWDIRTYSTATE=1</code>
+<code>export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"</code></p>
 </li>
-<li>'\u' adds the name of the current user to the prompt</li>
-<li>'\$(__git_ps1)' adds git-related stuff</li>
-<li>'\W' adds the name of the current directory
-export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"</li>
+<li><code>\u</code> adds the name of the current user to the prompt</li>
+<li><code>\$(__git_ps1)</code> adds git-related stuff</li>
+<li><code>\W</code> adds the name of the current directory</li>
 </ul>
-<h2 id="gitignore">.gitignore<a class="headerlink" href="#gitignore" title="Permanent link">&para;</a></h2>
-<ul>
-<li>create .gitignore file:
-  ```text
-  # OSX
-  .DS_Store</li>
-</ul>
-<p># Environment
-  .venv</p>
-<p># Mkdocs
-  /site/
-  <code>``
-- untrack everything that is now in .gitignore:
-  1. commit all changes
-  2.  remove everything from the repo:</code>git rm -r --cached .<code>(recursively remove all files from the index)
-  3. re add everything:</code>git add .<code>4. commit:</code>git commit -m '.gitignore fix'`</p>
                 
                   
                 
