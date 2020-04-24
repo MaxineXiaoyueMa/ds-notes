@@ -1,5 +1,5 @@
 # Cheatsheet - Git
-**Commonly used git commands**
+> **Commonly used git commands**
 
 ## Repository
 - initialize a git repo:
@@ -9,9 +9,12 @@
 - remove git from current directory: `rm -rf .git`
 
 ## Tracking
-- add file/folder to staging area: `git add file_name`
-- remove a file that is not ready for a commit, a.k.a., undo add: `git reset file_name`
-- commit change: `git commit -m "commit message"`
+- add file/folder to staging area:
+`git add file_name`
+- remove a file that is not ready for a commit, a.k.a., undo add:
+`git reset file_name`
+- commit change:
+`git commit -m "commit message"`
 - rename a file in git:
 `git mv old_file_name new_file_name`
 `git commit -m 'rename file'`
@@ -28,14 +31,14 @@
       `--graph` give visualization of branches,
       `--oneline` allows tighter and tidier presentation
 
-    ```sh
+```sh
     * | 7d7ee90 update readme.md
     |/
     * 2d26671 update readme.md
-    * 6afe247 delete files now in .gitignore
-    ```
+```
     vs. without `--oneline`
-    ```sh
+
+```sh
     * | commit 7d7ee90df266f08201275427623d78d316e5b959
     |/  Author: Xiaoyue<xxxxxxXiaoyueMa@users.noreply.github.com>
     |   Date:   Fri Mar 20 18:52:23 2020 -0700
@@ -45,43 +48,60 @@
     * commit 2d26671d93cfad488e18804f071d409b9dfa17ff
     | Author: Xiaoyue <xxxxxxXiaoyueMa@users.noreply.github.com>
     | Date:   Fri Mar 20 18:35:16 2020 -0700
-    ```
+```
+- compare the difference between two versions::
+`git diff first_id second_id`
+
+- compare the difference between working directory and staging area:
+`git diff`
+- compare the difference between staging aread and most recent commit:
+`git diff --staged`
+- compare the difference between a commit and its parent:
+`git show commit_id`
+
+- cloning a Repository:
+`git clone repository_URL`
+
+- getting Colored Output:
+`git config --global color.ui auto`
+
+- restoring to a commit temporarily:
+`git checkout commit_id`
 
 ## Remote
+- add a remote repository:
+`git remote add origin repository_url`
 
-- Adding a remote repository: `git remote add origin repository_url`
-- update remote repo:`git push origin master`
-- Checking remote repository status:`git remote`
-- update local repo:`git pull origin master`
-- Remove a remote repository:
+- update/sync remote repository with local repo:
+`git push origin master`
+
+- check remote repository status:
+`git remote`
+
+- get more information on remote:
+`git remote show origin`
+
+- update/sync local repo with remote repo:
+`git pull origin master`
+
+- rename a remote repository:
+  - rename remote repo on github,
+  - update local repo's remote url:
+  `git remote set-url origin new-rul`
+- check remote repo url:
+`git config --get remote.origin.url`
+
+- remove a remote repository:
 `git remote -v`
 `git remote rm origin`
 `git remote -v`
-- Comprare the difference between remote and local:
+
+- comprare the difference between remote and local:
 `git fetch` + `git diff ...origin/master`
 
-- Comparing the difference between two versions::
-`git diff first_id second_id`
-- Comparing the difference between working directory and staging area:
-`git diff`
-- Comparing the difference between staging aread and most recent commit:
-`git diff --staged`
-- Comparing the difference between a commit and its parent:
-`git show commit_id`
 
-- Cloning a Repository:
-`git clone repository_URL`
 
-- Getting Colored Output:
-`git config --global color.ui auto`
-
-- Restoring to a commit temporarily:
-`git checkout commit_id`
-
-HEAD_current commit
-Octopus_
-
-## branches
+## Branch
 - Create a branch
 `git branch branch_name`
 - Checking which branch is being worked on
@@ -99,48 +119,20 @@ If confict, make changes, then:
 - Pushing a branch to the remote
 `git push (to) remote_name branch_name`
 
----
-
-setting up workspace recanolrence:
-https://classroom.udacity.com/courses/ud775/lessons/2980038599/concepts/33331589510923#
-
-[git config --global core.editor "'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w"
-git config --global push.default upstream
-git config --global merge.conflictstyle diff3]
-
 ## Utilities
+- check the git version: `git --version`
+  - source ~/git-completion.bash
 
-- Checking the git version: `git --version`
-- source ~/git-completion.bash
-
-- colors!
-green="\[\033[0;32m\]"
-blue="\[\033[0;34m\]"
-purple="\[\033[0;35m\]"
-reset="\[\033[0m\]"
+- colors
+  - green="\[\033[0;32m\]"
+  - blue="\[\033[0;34m\]"
+  - purple="\[\033[0;35m\]"
+  - reset="\[\033[0m\]"
 
 - Change command prompt
-source ~/git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-- '\u' adds the name of the current user to the prompt
-- '\$(__git_ps1)' adds git-related stuff
-- '\W' adds the name of the current directory
-export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
-
-## .gitignore
-- create .gitignore file:
-  ```text
-  # OSX
-  .DS_Store
-
-  # Environment
-  .venv
-
-  # Mkdocs
-  /site/
-  ```
-- untrack everything that is now in .gitignore:
-  1. commit all changes
-  2.  remove everything from the repo: `git rm -r --cached .` (recursively remove all files from the index)
-  3. re add everything: `git add .`
-  4. commit: `git commit -m '.gitignore fix'`
+`source ~/git-prompt.sh`
+`export GIT_PS1_SHOWDIRTYSTATE=1`
+`export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"`
+  - `\u` adds the name of the current user to the prompt
+  - `\$(__git_ps1)` adds git-related stuff
+  - `\W` adds the name of the current directory
