@@ -198,6 +198,14 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#algorithms" class="md-nav__link">
+    Algorithms
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#regression" class="md-nav__link">
     Regression
   </a>
@@ -223,8 +231,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#classification" class="md-nav__link">
     Classification
   </a>
@@ -250,8 +258,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#unsupervised" class="md-nav__link">
     Unsupervised
   </a>
@@ -262,6 +270,31 @@
           <li class="md-nav__item">
   <a href="#clustering" class="md-nav__link">
     Clustering
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeling" class="md-nav__link">
+    Modeling
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-tuning" class="md-nav__link">
+    Model tuning
   </a>
   
 </li>
@@ -289,8 +322,9 @@
                 
                 
                 <h1 id="machine-learning-concept">Machine Learning Concept<a class="headerlink" href="#machine-learning-concept" title="Permanent link">&para;</a></h1>
-<h2 id="regression">Regression<a class="headerlink" href="#regression" title="Permanent link">&para;</a></h2>
-<h3 id="regression-algorithms">Regression Algorithms<a class="headerlink" href="#regression-algorithms" title="Permanent link">&para;</a></h3>
+<h2 id="algorithms">Algorithms<a class="headerlink" href="#algorithms" title="Permanent link">&para;</a></h2>
+<h3 id="regression">Regression<a class="headerlink" href="#regression" title="Permanent link">&para;</a></h3>
+<h4 id="regression-algorithms">Regression Algorithms<a class="headerlink" href="#regression-algorithms" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>Linear Regression</strong>
   <strong>LASSO</strong>
@@ -301,7 +335,7 @@
 <li><strong>Adaboost Regressor</strong></li>
 <li><strong>Support Vector Regression</strong></li>
 </ol>
-<h3 id="regression-metrics">Regression metrics<a class="headerlink" href="#regression-metrics" title="Permanent link">&para;</a></h3>
+<h4 id="regression-metrics">Regression metrics<a class="headerlink" href="#regression-metrics" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>MSE</strong>(Mean Squared Error): popular metric for regression models as a loss function, calculates the average of squared error = (y truth - y prediction). Note large error's are penalized much heavier than small errors. Parameters update much faster during graident descent with this loss function at large errors.</li>
 <li><strong>RMSE</strong>(Root Mean Squared Error): square root of MSE, but has same unit as predition</li>
@@ -309,8 +343,8 @@
 <li><strong>R-Squared</strong>(Coefficient of Determination): the proportion of variance in y that is explained by the features. 1 - SSE(Sum of Squared Errors)/TSS(Total Sum of Squares). Default metric for regression models on sklearn.</li>
 <li><strong>Adjusted R-Squared</strong>(Adjusted Coefficient of Determination): like R-Squared, but penalizes the amount of features used in prediction, is always smaller than R-Squared. 1 - (SSE/(n-k))/(TSS/(n-1))</li>
 </ol>
-<h2 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h2>
-<h3 id="classification-algorithms">Classification Algorithms<a class="headerlink" href="#classification-algorithms" title="Permanent link">&para;</a></h3>
+<h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h3>
+<h4 id="classification-algorithms">Classification Algorithms<a class="headerlink" href="#classification-algorithms" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>Naive Bayes Classifier</strong> - generative model P(x, y)<blockquote>
 <p>Essentially, comparing probability of having feature set X conditional on target being positive vs. negative.</p>
@@ -334,20 +368,45 @@ Since the denomenator is the same, compare P(y&amp;X) and P((1-y)&amp;X)</p>
 <li><strong>Permutation importance</strong>: mean accuracy (or any other metrics) reduction due to permuting each features, averaged over all trees.</li>
 </ol>
 </li>
-<li><strong>Random Forest Classifier</strong> - discriminative model P(y|x)</li>
+<li><strong>Random Forest Classifier</strong> - discriminative model P(y|x): Simultaneousely build a forest of trees that each independently make predictions on samples. Subsampling and using only a small group of features add randomness. Each tree can also be limited to control overfitting.</li>
 <li><strong>Gradient Boosted Trees</strong></li>
-<li><strong>Adaboost</strong></li>
+<li><strong>Adaboost</strong>: Buildling estimators sequentially to lear better from mistakes. Adaptive by giving more weight to samples that were wrong.<ol>
+<li>initiliaze equal weight 1/# of observations to each observation</li>
+<li>iterate:<ol>
+<li>calculate weighted error</li>
+<li>calculate model weight with weighted error</li>
+<li>update sample weight with weighted error</li>
+<li>build another model with newly weighted samples</li>
+</ol>
+</li>
+<li>calculate final prediction with prediction from each model weighted by their weights:<ol>
+<li>weighted probability</li>
+<li>majority vote</li>
+</ol>
+</li>
+</ol>
+</li>
 <li><strong>Support Vector Machine</strong></li>
 </ol>
-<h3 id="classification-metrics">Classification Metrics<a class="headerlink" href="#classification-metrics" title="Permanent link">&para;</a></h3>
+<h4 id="classification-metrics">Classification Metrics<a class="headerlink" href="#classification-metrics" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>ROC Curve</strong>: rank observation from the most likely to least likely, a good separater will have have score
 2.<strong>Accuracy</strong>: default metric for classification models, measure how many observations are correctly classified with default threshold 0.5, not a good measure for imbalanced data, or threshold other than 0.5.</li>
 <li><strong>Precision-Recall Curve</strong>:</li>
 </ol>
-<h2 id="unsupervised">Unsupervised<a class="headerlink" href="#unsupervised" title="Permanent link">&para;</a></h2>
-<h3 id="clustering">Clustering<a class="headerlink" href="#clustering" title="Permanent link">&para;</a></h3>
-<p>1, <strong>KMeans</strong>: find predetermined number of clusters. It is achieved by first pick cluster centers, then iteratively calculate euclidean distance between observations and cluter centers, assign observations to cluster centers, and recalculate cluster centers by averaging the distances of observations to corresponding cluster centers until convergence.</p>
+<h3 id="unsupervised">Unsupervised<a class="headerlink" href="#unsupervised" title="Permanent link">&para;</a></h3>
+<h4 id="clustering">Clustering<a class="headerlink" href="#clustering" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>KMeans</strong>: find predetermined number of clusters. It is achieved by first pick cluster centers, then iteratively calculate euclidean distance between observations and cluter centers, assign observations to cluster centers, and recalculate cluster centers by averaging the distances of observations to corresponding cluster centers until convergence.</li>
+</ol>
+<h2 id="modeling">Modeling<a class="headerlink" href="#modeling" title="Permanent link">&para;</a></h2>
+<h3 id="model-tuning">Model tuning<a class="headerlink" href="#model-tuning" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Random search</li>
+<li>grid search</li>
+<li>baysian based optimization:
+Reference: https://www.cs.cornell.edu/courses/cs4787/2019sp/notes/lecture16.pdf</li>
+</ol>
                 
                   
                 

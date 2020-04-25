@@ -262,15 +262,23 @@
 </li>
 <li>check the contents of a repository: <code>git status</code></li>
 <li>remove git from current directory: <code>rm -rf .git</code></li>
+<li>clone a repository:
+<code>git clone repository_URL</code></li>
 </ul>
 <h2 id="tracking">Tracking<a class="headerlink" href="#tracking" title="Permanent link">&para;</a></h2>
 <ul>
-<li>add file/folder to staging area:
-<code>git add file_name</code></li>
-<li>remove a file that is not ready for a commit, a.k.a., undo add:
-<code>git reset file_name</code></li>
-<li>commit change:
-<code>git commit -m "commit message"</code></li>
+<li>
+<p>add file/folder to staging area:
+<code>git add file_name</code></p>
+</li>
+<li>
+<p>remove a file that is not ready for a commit, a.k.a., undo add:
+<code>git reset file_name</code></p>
+</li>
+<li>
+<p>commit change:
+<code>git commit -m "commit message"</code></p>
+</li>
 <li>
 <p>rename a file in git:
 <code>git mv old_file_name new_file_name</code>
@@ -322,22 +330,16 @@
 <p>compare the difference between working directory and staging area:
 <code>git diff</code></p>
 </li>
-<li>compare the difference between staging aread and most recent commit:
-<code>git diff --staged</code></li>
+<li>
+<p>compare the difference between staging aread and most recent commit:
+<code>git diff --staged</code></p>
+</li>
 <li>
 <p>compare the difference between a commit and its parent:
 <code>git show commit_id</code></p>
 </li>
 <li>
-<p>cloning a Repository:
-<code>git clone repository_URL</code></p>
-</li>
-<li>
-<p>getting Colored Output:
-<code>git config --global color.ui auto</code></p>
-</li>
-<li>
-<p>restoring to a commit temporarily:
+<p>restore to a commit temporarily:
 <code>git checkout commit_id</code></p>
 </li>
 </ul>
@@ -365,10 +367,12 @@
 </li>
 <li>
 <p>rename a remote repository:</p>
-</li>
+<ul>
 <li>rename remote repo on github,</li>
 <li>update local repo's remote url:
   <code>git remote set-url origin new-rul</code></li>
+</ul>
+</li>
 <li>
 <p>check remote repo url:
 <code>git config --get remote.origin.url</code></p>
@@ -386,52 +390,59 @@
 </ul>
 <h2 id="branch">Branch<a class="headerlink" href="#branch" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Create a branch
-<code>git branch branch_name</code></li>
 <li>
-<p>Checking which branch is being worked on
+<p>create a branch:
+<code>git branch branch_name</code></p>
+</li>
+<li>
+<p>check which branch is being worked on:
 <code>git branch</code></p>
 </li>
 <li>
-<p>Delete a branch
+<p>delete a branch:
 <code>git branch -d branch_name</code></p>
 </li>
 <li>
-<p>Merge a branch
+<p>merge a branch:
 <code>git merge name</code>
 If confict, make changes, then:
 <code>git add file_name(where conflicts occur)</code>
 <code>git commit</code></p>
 </li>
 <li>
-<p>Pushing a branch to the remote
+<p>push a branch to the remote:
 <code>git push (to) remote_name branch_name</code></p>
 </li>
 </ul>
 <h2 id="utilities">Utilities<a class="headerlink" href="#utilities" title="Permanent link">&para;</a></h2>
 <ul>
-<li>check the git version: <code>git --version</code></li>
 <li>
-<p>source ~/git-completion.bash</p>
+<p>check the git version: <code>git --version</code></p>
 </li>
 <li>
-<p>colors</p>
+<p>get colored Output:
+  <code>git config --global color.ui auto</code></p>
 </li>
+<li>
+<p>colors:</p>
+<ul>
 <li>green="[\033[0;32m]"</li>
 <li>blue="[\033[0;34m]"</li>
 <li>purple="[\033[0;35m]"</li>
-<li>
-<p>reset="[\033[0m]"</p>
+<li>reset="[\033[0m]"</li>
+</ul>
 </li>
 <li>
 <p>Change command prompt
 <code>source ~/git-prompt.sh</code>
 <code>export GIT_PS1_SHOWDIRTYSTATE=1</code>
 <code>export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"</code></p>
-</li>
+<ul>
 <li><code>\u</code> adds the name of the current user to the prompt</li>
 <li><code>\$(__git_ps1)</code> adds git-related stuff</li>
 <li><code>\W</code> adds the name of the current directory</li>
+</ul>
+</li>
 </ul>
                 
                   
