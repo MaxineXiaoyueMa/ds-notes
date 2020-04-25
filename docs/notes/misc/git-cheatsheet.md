@@ -7,14 +7,19 @@
     1. initialize the repo: `git init`
 - check the contents of a repository: `git status`
 - remove git from current directory: `rm -rf .git`
+- clone a repository:
+`git clone repository_URL`
 
 ## Tracking
 - add file/folder to staging area:
 `git add file_name`
+
 - remove a file that is not ready for a commit, a.k.a., undo add:
 `git reset file_name`
+
 - commit change:
 `git commit -m "commit message"`
+
 - rename a file in git:
 `git mv old_file_name new_file_name`
 `git commit -m 'rename file'`
@@ -54,18 +59,14 @@
 
 - compare the difference between working directory and staging area:
 `git diff`
+
 - compare the difference between staging aread and most recent commit:
 `git diff --staged`
+
 - compare the difference between a commit and its parent:
 `git show commit_id`
 
-- cloning a Repository:
-`git clone repository_URL`
-
-- getting Colored Output:
-`git config --global color.ui auto`
-
-- restoring to a commit temporarily:
+- restore to a commit temporarily:
 `git checkout commit_id`
 
 ## Remote
@@ -85,8 +86,8 @@
 `git pull origin master`
 
 - rename a remote repository:
-  - rename remote repo on github,
-  - update local repo's remote url:
+    - rename remote repo on github,
+    - update local repo's remote url:
   `git remote set-url origin new-rul`
 - check remote repo url:
 `git config --get remote.origin.url`
@@ -102,37 +103,40 @@
 
 
 ## Branch
-- Create a branch
+- create a branch:
 `git branch branch_name`
-- Checking which branch is being worked on
+
+- check which branch is being worked on:
 `git branch`
 
-- Delete a branch
+- delete a branch:
 `git branch -d branch_name`
 
-- Merge a branch
+- merge a branch:
 `git merge name`
 If confict, make changes, then:
 `git add file_name(where conflicts occur)`
 `git commit`
 
-- Pushing a branch to the remote
+- push a branch to the remote:
 `git push (to) remote_name branch_name`
 
 ## Utilities
 - check the git version: `git --version`
-  - source ~/git-completion.bash
 
-- colors
-  - green="\[\033[0;32m\]"
-  - blue="\[\033[0;34m\]"
-  - purple="\[\033[0;35m\]"
-  - reset="\[\033[0m\]"
+- get colored Output:
+  `git config --global color.ui auto`
+
+- colors:
+    - green="\[\033[0;32m\]"
+    - blue="\[\033[0;34m\]"
+    - purple="\[\033[0;35m\]"
+    - reset="\[\033[0m\]"
 
 - Change command prompt
 `source ~/git-prompt.sh`
 `export GIT_PS1_SHOWDIRTYSTATE=1`
 `export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"`
-  - `\u` adds the name of the current user to the prompt
-  - `\$(__git_ps1)` adds git-related stuff
-  - `\W` adds the name of the current directory
+    - `\u` adds the name of the current user to the prompt
+    - `\$(__git_ps1)` adds git-related stuff
+    - `\W` adds the name of the current directory
