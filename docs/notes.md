@@ -30,11 +30,11 @@
 - [reproducibility - set random state](notes/utility/reproducibility-set-random-state.ipynb)
 
 ## Miscellaneous
-- [markdown - cheatsheet](notes/misc/markdown-cheatsheet.md)
-- [command line (cli) - cheatsheet](notes/misc/cli-cheatsheet.md)
+- [cli - command line - cheatsheet](notes/misc/cli-cheatsheet.md)
 - [concept - machine learning](notes/misc/algorithm-summary.md)
 - [concept - fastai classes](notes/misc/fastai-concept-list.md)
 - [git - cheatsheet](notes/misc/git-cheatsheet.md)
 - [git - .gitignore and untrack files](notes/misc/git-gitignore-untrack-files.md)
 - [git - add remote repository on github via commandline](notes/misc/git-add-project-to-GitHub.md)
+- [markdown - cheatsheet](notes/misc/markdown-cheatsheet.md)
 - [platform - google cloud platform  - fastai](notes/misc/platform-google-cloud-fastai.md)
