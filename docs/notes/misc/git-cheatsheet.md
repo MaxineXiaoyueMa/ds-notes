@@ -20,6 +20,8 @@
 - commit change:
 `git commit -m "commit message"`
 
+- list all the files being tracked: `git ls-tree -r master --name-only`
+
 - rename a file in git:
 `git mv old_file_name new_file_name`
 `git commit -m 'rename file'`
