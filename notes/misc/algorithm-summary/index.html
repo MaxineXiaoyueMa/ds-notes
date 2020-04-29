@@ -327,13 +327,13 @@
 <h4 id="regression-algorithms">Regression Algorithms<a class="headerlink" href="#regression-algorithms" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>Linear Regression</strong>
-  <strong>LASSO</strong>
-  <strong>Ridge</strong></li>
+  <strong>LASSO</strong>: regularization term is the L1 norm sum of absolute values of parameters
+  <strong>Ridge</strong>: regularization term is the L2 norm - sum of squared values of parameters</li>
 <li><strong>Decision Trees</strong></li>
-<li><strong>Random Forest Regressor</strong></li>
+<li><strong>Random Forest Regressor</strong>:</li>
 <li><strong>Gradient Boosted Trees Regressor</strong></li>
-<li><strong>Adaboost Regressor</strong></li>
-<li><strong>Support Vector Regression</strong></li>
+<li><strong>Adaboost Regressor</strong>:</li>
+<li><strong>Support Vector Regression</strong>: find the hyperplane such that all observations fall in the band. Support vectors are the vectors that are on the edge of the band.</li>
 </ol>
 <h4 id="regression-metrics">Regression metrics<a class="headerlink" href="#regression-metrics" title="Permanent link">&para;</a></h4>
 <ol>
@@ -398,14 +398,20 @@ Since the denomenator is the same, compare P(y&amp;X) and P((1-y)&amp;X)</p>
 <h4 id="clustering">Clustering<a class="headerlink" href="#clustering" title="Permanent link">&para;</a></h4>
 <ol>
 <li><strong>KMeans</strong>: find predetermined number of clusters. It is achieved by first pick cluster centers, then iteratively calculate euclidean distance between observations and cluter centers, assign observations to cluster centers, and recalculate cluster centers by averaging the distances of observations to corresponding cluster centers until convergence.</li>
+<li><strong>Cluster Measures</strong>:<ol>
+<li>cluster similarities: adjusted Rand Index (pairs that two clusering agress over total pairs adjusted for randomness)</li>
+<li>how good the clusters are: silhouette score (using mean distance from each point to other points within the same cluster and mean distance from each point to points outside the same clusters. Good clustering result in small distance within cluster, and large distance outside cluster, final measure is close to 1.)</li>
+</ol>
+</li>
 </ol>
 <h2 id="modeling">Modeling<a class="headerlink" href="#modeling" title="Permanent link">&para;</a></h2>
 <h3 id="model-tuning">Model tuning<a class="headerlink" href="#model-tuning" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Random search</li>
 <li>grid search</li>
-<li>baysian based optimization:
-Reference: https://www.cs.cornell.edu/courses/cs4787/2019sp/notes/lecture16.pdf</li>
+<li>bayesian based optimization: "smartly" sample hyperparameter space by learning from previous trials. Gaussian process to poximate
+Reference: https://www.cs.cornell.edu/courses/cs4787/2019sp/notes/lecture16.pdf
+https://www.arxiv-vanity.com/papers/1012.2599/</li>
 </ol>
                 
                   
