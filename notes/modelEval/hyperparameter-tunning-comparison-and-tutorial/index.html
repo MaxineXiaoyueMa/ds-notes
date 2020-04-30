@@ -205,6 +205,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#2-randomsearch" class="md-nav__link">
+    2. RandomSearch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3-hyperopt" class="md-nav__link">
     3. Hyperopt
   </a>
@@ -225,8 +232,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-reference" class="md-nav__link">
-    4. Reference
+  <a href="#4-hyperopt-exploration" class="md-nav__link">
+    4. hyperopt exploration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-reference" class="md-nav__link">
+    5. Reference
   </a>
   
 </li>
@@ -281,18 +295,9 @@
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
 <h1 id="hyperparameter-tuning-comparison-and-tutorial">Hyperparameter Tuning Comparison and Tutorial<a class="headerlink" href="#hyperparameter-tuning-comparison-and-tutorial" title="Permanent link">&para;</a></h1>
-<p>updated on 2020/04/29</p>
-<p><a id = 'toc'></a>    
-**Table of Contents**
-1. [GridSearch](#grid)
-2. [RandomSearch](#random)
-3. [Baysian Optimization - hyperopt](#hyper)
-    - [TPE](#hyper)
-4. [hyperopt exploration](#exp)
-4. [Reference](#ref)
+<p>updated on 2020/04/29
 </div>
-</div>
-</p>
+</div></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -459,12 +464,10 @@ mean score: 0.3748212106452563
 
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
-<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
-<a href="#toc">Back to top</a></p>
-</div>
-</div>
-<p><a id = 'grid'></a></p>
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
 <h2 id="1-gridsearch">1. GridSearch<a class="headerlink" href="#1-gridsearch" title="Permanent link">&para;</a></h2>
+</div>
+</div>
 <p>Trying parameter sets one by one.
 1. Slow - exhaustive search
 2. Only discrete values - miss optimal values not on the grid
@@ -541,9 +544,7 @@ best_parameter:  {&#39;colsample_bytree&#39;: 0.6, &#39;learning_rate&#39;: 0.1,
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1">
 <strong>As observed, score doesn't move in a trend, rather, each iteration corresponds to a point from the grid. It appears that learning rate has the most impact on the score. as colsample_bytree increase, max_depth impacts increases as well.</strong></p>
-<p><a href="#toc">Back to top</a></p>
-<p><a id = 'random'></a>
-## 2. RandomSearch</p>
+<h2 id="2-randomsearch">2. RandomSearch<a class="headerlink" href="#2-randomsearch" title="Permanent link">&para;</a></h2>
 <p>Advantage:
 1. Variate all parameters for each search, not wasting time on meaningless parameters
 2. Generally faster
@@ -625,8 +626,6 @@ rs_best_parameter:  {&#39;colsample_bytree&#39;: 0.5404040404040404, &#39;learni
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1">
 <strong>Randomized search with the same number trials, improved upon the default model, but didn't out perform grid search. The sampleing is random, therefore, no trend in score progression.</strong></p>
-<p><a href="#toc">Back to Top</a></p>
-<p><a id = 'hyper'></a></p>
 <h2 id="3-hyperopt">3. Hyperopt<a class="headerlink" href="#3-hyperopt" title="Permanent link">&para;</a></h2>
 <p></div>
 </div></p>
@@ -847,12 +846,9 @@ rs_best_parameter:  {&#39;colsample_bytree&#39;: 0.5404040404040404, &#39;learni
 <p><div class="inner_cell" markdown="1">
 <div class="text_cell_render border-box-sizing rendered_html" markdown="1">
 <strong>It is obvious that score is trending down as hyperopt learns more about the objective function space. What's more interesintg is the decrease in oscillations across all hyperparameters, with learning_rate being the most obvious. This is consistent with earlier observation of learning rate has the most impact, thus lowering it reduces the loss the most.</strong></p>
-<p><a href="#toc">back to top</a></p>
-<p><a id = 'exp'></a>
-## 4. hyperopt exploration
-</div>
-</div>
-</p>
+<h2 id="4-hyperopt-exploration">4. hyperopt exploration<a class="headerlink" href="#4-hyperopt-exploration" title="Permanent link">&para;</a></h2>
+<p></div>
+</div></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1037,10 +1033,8 @@ rs_best_parameter:  {&#39;colsample_bytree&#39;: 0.5404040404040404, &#39;learni
 
 <div class="cell border-box-sizing text_cell rendered">
 <p><div class="inner_cell" markdown="1">
-<div class="text_cell_render border-box-sizing rendered_html" markdown="1">
-<a href="#toc">back to top</a>
-<a id= 'ref'></a></p>
-<h2 id="4-reference">4. Reference<a class="headerlink" href="#4-reference" title="Permanent link">&para;</a></h2>
+<div class="text_cell_render border-box-sizing rendered_html" markdown="1"></p>
+<h2 id="5-reference">5. Reference<a class="headerlink" href="#5-reference" title="Permanent link">&para;</a></h2>
 <p>https://www.kaggle.com/ilialar/hyperparameters-tunning-with-hyperopt
 </div>
 </div></p>
