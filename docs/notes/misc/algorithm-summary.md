@@ -4,13 +4,13 @@
 ### Regression
 #### Regression Algorithms
 1. **Linear Regression**
-  **LASSO**
-  **Ridge**
+  **LASSO**: regularization term is the L1 norm sum of absolute values of parameters
+  **Ridge**: regularization term is the L2 norm - sum of squared values of parameters
 2. **Decision Trees**
-3. **Random Forest Regressor**
+3. **Random Forest Regressor**:
 4. **Gradient Boosted Trees Regressor**
-5. **Adaboost Regressor**
-6. **Support Vector Regression**
+5. **Adaboost Regressor**:
+6. **Support Vector Regression**: find the hyperplane such that all observations fall in the band. Support vectors are the vectors that are on the edge of the band.
 
 #### Regression metrics
 1. **MSE**(Mean Squared Error): popular metric for regression models as a loss function, calculates the average of squared error = (y truth - y prediction). Note large error's are penalized much heavier than small errors. Parameters update much faster during graident descent with this loss function at large errors.
@@ -61,10 +61,14 @@ Reference: http://cs229.stanford.edu/notes/cs229-notes2.pdf
 ### Unsupervised
 #### Clustering
 1. **KMeans**: find predetermined number of clusters. It is achieved by first pick cluster centers, then iteratively calculate euclidean distance between observations and cluter centers, assign observations to cluster centers, and recalculate cluster centers by averaging the distances of observations to corresponding cluster centers until convergence.
+2. **Cluster Measures**:
+     1. cluster similarities: adjusted Rand Index (pairs that two clusering agress over total pairs adjusted for randomness)
+     2. how good the clusters are: silhouette score (using mean distance from each point to other points within the same cluster and mean distance from each point to points outside the same clusters. Good clustering result in small distance within cluster, and large distance outside cluster, final measure is close to 1.)
 
 ## Modeling
 ### Model tuning
 1. Random search
 2. grid search
-3. baysian based optimization:
+3. bayesian based optimization: "smartly" sample hyperparameter space by learning from previous trials. Gaussian process to poximate
 Reference: https://www.cs.cornell.edu/courses/cs4787/2019sp/notes/lecture16.pdf
+https://www.arxiv-vanity.com/papers/1012.2599/
