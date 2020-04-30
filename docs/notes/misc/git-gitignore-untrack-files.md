@@ -1,19 +1,20 @@
 gitignore and untrack ignored files
 
 1. create .gitignore file: e.g. `echo .DS_Store >> .gitignore`
-    ```shell
-    # System OSX
-    .DS_Store
 
-    # Environment
-    .venv
+```shell
+# System OSX
+.DS_Store
 
-    # Specific folder
-    /data
+# Environment
+.venv
 
-    # Mkdocs
-    /site/
-    ```
+# Specific folder
+/data
+
+# Mkdocs
+/site/
+```
 
 2. untrack everything that is now in .gitignore:
     1. commit all changes
