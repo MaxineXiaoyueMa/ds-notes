@@ -32,6 +32,7 @@
 
 ## Miscellaneous
 - [atom text editor - cheatsheet](notes/misc/cheatsheet-atomTextEditor.md)
+- [AWS cli - cheatsheet](notes/misc/awscli-cheatsheet.md)
 - [cli - command line - cheatsheet](notes/misc/cli-cheatsheet.md)
 - [concept - machine learning](notes/misc/algorithm-summary.md)
 - [concept - fastai classes](notes/misc/fastai-concept-list.md)
