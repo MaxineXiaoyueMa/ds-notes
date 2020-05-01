@@ -1,7 +1,8 @@
 ## Python
-- [python - basics data structure](notes/python/python-basics-data-structures.ipynb)
-- [python - basics data types](notes/python/python-basics-data-types.ipynb)
-- [python - basics string basics](notes/python/python-basics-string-basics.ipynb)
+- [python - basics - data structure](notes/python/python-basics-data-structures.ipynb)
+- [python - basics - data types](notes/python/python-basics-data-types.ipynb)
+- [python - basics - string basics](notes/python/python-basics-string-basics.ipynb)
+- [python - basics - strying manipulation](notes/python/python-basics-string-manipulation.md)
 
 ## Data Wrangling
 - [pandas - pd.read_csv file path referencing](notes/dataWrangling/pandas-read_csv-file-path-examples.md)
