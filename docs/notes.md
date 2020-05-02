@@ -22,6 +22,7 @@
 - [seaborn - stripplot](notes/visualization/seaborn-sns.stripplot-example.ipynb)
 
 ## Modeling
+- [concept - machine learning](notes/misc/algorithm-summary.md)
 - [algorithm - classification exploration](notes/modelEval/algorithm-classification-exploraiton.ipynb)
 - [sklearn - cross validation methods and comparison](notes/modelEval/sklearn-cross-validation-methods-and-comparison.md)
 - [sklearn - setting hyperparameters with double asterisks](notes/modelEval/sklearn-model-setting-parameters-with-double-asterisks.md)
@@ -35,7 +36,6 @@
 - [atom text editor - cheatsheet](notes/misc/cheatsheet-atomTextEditor.md)
 - [aws cli - cheatsheet](notes/misc/awscli-cheatsheet.md)
 - [cli - command line - cheatsheet](notes/misc/cli-cheatsheet.md)
-- [concept - machine learning](notes/misc/algorithm-summary.md)
 - [concept - fastai classes](notes/misc/fastai-concept-list.md)
 - [git - cheatsheet](notes/misc/git-cheatsheet.md)
 - [git - .gitignore and untrack files](notes/misc/git-gitignore-untrack-files.md)
