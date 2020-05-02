@@ -21,7 +21,8 @@
 - [seaborn - figure background](notes/visualization/seaborn-sns.set_style-figure-backgroud.ipynb)
 - [seaborn - stripplot](notes/visualization/seaborn-sns.stripplot-example.ipynb)
 
-## Model Evaluation
+## Modeling
+- [algorithm - classification exploration](notes/modelEval/algorithm-classification-exploraiton.ipynb)
 - [sklearn - cross validation methods and comparison](notes/modelEval/sklearn-cross-validation-methods-and-comparison.md)
 - [sklearn - setting hyperparameters with double asterisks](notes/modelEval/sklearn-model-setting-parameters-with-double-asterisks.md)
 - [pickle - how to save trained models and important objects](notes/modelEval/pickle-to-Save-Trained-Model.md)
