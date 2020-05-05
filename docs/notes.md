@@ -35,13 +35,17 @@
 ## Utility
 - [reproducibility - set random state](notes/utility/reproducibility-set-random-state.ipynb)
 
-## Miscellaneous
-- [atom text editor - cheatsheet](notes/misc/cheatsheet-atomTextEditor.md)
-- [cli - command line - cheatsheet](notes/misc/cli-cheatsheet.md)
+## Git
 - [git - cheatsheet](notes/misc/git-cheatsheet.md)
 - [git - .gitignore and untrack files](notes/misc/git-gitignore-untrack-files.md)
 - [git - add remote repository on github via commandline](notes/misc/git-add-project-to-GitHub.md)
-- [markdown - cheatsheet](notes/misc/markdown-cheatsheet.md)
+
+## Cloud Platform
 - [platform - aws - ec2 data science set up](notes/misc/aws-setup.md)
-- [platform - aws cli - cheatsheet](notes/misc/awscli-cheatsheet.md)
+- [platform - aws - cli cheatsheet](notes/misc/awscli-cheatsheet.md)
 - [platform - google cloud platform  - fastai](notes/misc/platform-google-cloud-fastai.md)
+
+## Miscellaneous
+- [atom text editor - cheatsheet](notes/misc/cheatsheet-atomTextEditor.md)
+- [cli - command line - cheatsheet](notes/misc/cli-cheatsheet.md)
+- [markdown - cheatsheet](notes/misc/markdown-cheatsheet.md)
