@@ -1,0 +1,386 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>How to set up new AWS EC2 instance - XIAOYUE'S NOTES</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ab47bc">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../../../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../../../css/pandas-dataframe.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="purple" data-md-color-accent="pink">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#how-to-set-up-new-aws-ec2-instance" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="XIAOYUE'S NOTES" aria-label="XIAOYUE'S NOTES" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              XIAOYUE'S NOTES
+            </span>
+            <span class="md-header-nav__topic">
+              
+                How to set up new AWS EC2 instance
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../.." title="XIAOYUE'S NOTES" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    XIAOYUE'S NOTES
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Notes" class="md-nav__link">
+      Notes
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instance" class="md-nav__link">
+    instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-working-flow" class="md-nav__link">
+    start working flow:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    reference
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="how-to-set-up-new-aws-ec2-instance">How to set up new AWS EC2 instance<a class="headerlink" href="#how-to-set-up-new-aws-ec2-instance" title="Permanent link">&para;</a></h1>
+<h2 id="instance">instance<a class="headerlink" href="#instance" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Create account</p>
+</li>
+<li>
+<p>Log into AWS account (as Administrator):</p>
+</li>
+<li>
+<p>Pick and launch an EC2 instance:</p>
+<ol>
+<li>"EC2" -&gt; "Instances" -&gt; "Launch" -&gt; "Choose AMI: Ubuntu" -&gt;
+"Choose an Instance Type: t2.micro" -&gt; "Review and launch" -&gt;
+"Select an existing key pair" -&gt; "Launch" -&gt; "View instances"</li>
+<li>ssh into the remote instance:
+check keypair is private:<ul>
+<li><code>chmod 400 ~/path/to/xx.pem</code> (permission: owner can read, that's it)</li>
+<li><code>ssh [-i identity_file] [-J [user@]host[:port]] [-L address]</code></li>
+<li><code>ssh -i "xx.pem" ec2-user@ec2-34-212-232-179.us-west-2.compute.amazonaws.com</code></li>
+<li><code>ssh -i ~/path/to/xx.pem ubuntu@ec2-00-00-00-000.us-west-2.compute.amazonaws.com</code></li>
+</ul>
+</li>
+<li>set up environment:<ul>
+<li><code>pip install packages</code></li>
+</ul>
+</li>
+<li>set up virtual environment:<ol>
+<li><code>python3 -m venv .venv</code></li>
+<li><code>source .venv/bin/activate</code></li>
+<li><code>pip freeze &gt; requirements.txt</code></li>
+</ol>
+</li>
+<li>to recreate the environment:<ul>
+<li><code>pip install -r requirements.txt</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p>EBS volume monitoring
+1. check available space (after ssh into remote):
+    - <code>df --output=source, pcent /dev/nvme0n1p1</code>
+    - <code>df -hT /dev/nvme0n1p1</code>
+2. where it is mounted: / (indicating the root)</p>
+<h2 id="start-working-flow">start working flow:<a class="headerlink" href="#start-working-flow" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>start instances:
+  <code>aws ec2 start-instances --instance-ids i-0000000000000000</code></p>
+</li>
+<li>
+<p>Get instance public DNS:
+  <code>aws ec2 describe-instances | grep DNS --output table</code></p>
+</li>
+<li>
+<p>ssh into instance:
+  <code>ssh -i ~/path/to/xx.pem ubuntu@ec2-00-00-00-000.us-west-2.compute.amazonaws.com</code></p>
+</li>
+<li>
+<p>activate virtual environment:
+  <code>source .venv/bin/activate</code></p>
+</li>
+<li>
+<p>check volume usage: <code>df -hT /dev/nvme0n1p1</code></p>
+</li>
+<li>
+<p>start jupyter with no browser:
+  <code>jupyter notebook --no-browser</code></p>
+</li>
+<li>
+<p>forward port where jupyter is served to local port:
+  <code>ssh -N -f -L localhost:8889:localhost:8888 ubuntu@ec2-00-00-00-000.us-west-2.compute.amazonaws.com</code></p>
+</li>
+<li>
+<p>stop instance:
+  <code>aws ec2 stop-instances --instance-ids i-04ba31a1d78978d34</code></p>
+</li>
+</ol>
+<h2 id="tips">tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<p>After running jobs:
+    1. scp file back to local server
+    2. copy multple files: <code>scp user@remote.com:'path/path1/file1 /path2/file2 /path3/file3' /localPath'</code></p>
+<p>scp ubuntu@ec2-18-236-70-44.us-west-2.compute.amazonaws.com:dev/num_cols_miss_imputing_dict.pkl ~/Documents/ds-local/ds-portfolio/ds-port-proj-classification-loanDefault-webScrape-realData-AWS-2020Feb/dev</p>
+<p>keep jupyter running:
+tmux new -s jup
+jupyter notebook --no-browser</p>
+<h2 id="reference">reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<ol>
+<li>https://medium.com/@junseopark/from-zero-to-aws-ec2-for-data-science-62e7a22d4579</li>
+<li>https://www.cyberciti.biz/faq/linux-check-disk-space-command/</li>
+<li>https://www.howtoforge.com/linux-lsblk-command/]</li>
+</ol>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/MaxineXiaoyueMa/ds-notes" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../.."}})</script>
+      
+    
+  </body>
+</html>
