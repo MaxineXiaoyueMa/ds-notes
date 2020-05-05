@@ -34,6 +34,7 @@
 
 ## Miscellaneous
 - [atom text editor - cheatsheet](notes/misc/cheatsheet-atomTextEditor.md)
+- [aws - ec2 data science set up](notes/misc/aws-setup.md)
 - [aws cli - cheatsheet](notes/misc/awscli-cheatsheet.md)
 - [cli - command line - cheatsheet](notes/misc/cli-cheatsheet.md)
 - [concept - fastai classes](notes/misc/fastai-concept-list.md)
