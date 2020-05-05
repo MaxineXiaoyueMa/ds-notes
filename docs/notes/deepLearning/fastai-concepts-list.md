@@ -1,7 +1,6 @@
-concept notes for fastai
+# concept notes for fastai
 > laundry list note from fastai classes with supplemental information
 > most example codes are from the fast.ai notebooks
->
 
 ## fasiai library
 - fastai.datasets.untar_data(): download file to some convenient path, untar it, return the value of path
@@ -55,5 +54,3 @@ fnames[:5]
   [PosixPath('/home/data/annotations'),
   PosixPath('/home/data/images')]
 - new_path = path/'annotations'
-
-### re

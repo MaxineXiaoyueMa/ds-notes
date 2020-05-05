@@ -29,6 +29,9 @@
 - [pickle - how to save trained models and important objects](notes/modelEval/pickle-to-Save-Trained-Model.md)
 - [hyperopt - hyperparameter tuning comparison](notes/modelEval/hyperparameter-tunning-comparison-and-tutorial.ipynb)
 
+## Deep Learning
+- [concept - fastai](notes/deepLearning/fastai-concepts-list.md)
+
 ## Utility
 - [reproducibility - set random state](notes/utility/reproducibility-set-random-state.ipynb)
 
