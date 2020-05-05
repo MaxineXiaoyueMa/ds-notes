@@ -30,6 +30,7 @@
 - [hyperopt - hyperparameter tuning comparison](notes/modelEval/hyperparameter-tunning-comparison-and-tutorial.ipynb)
 
 ## Deep Learning
+- [concept - deep learning](notes/deepLearning/concept-deepLearning.md)
 - [concept - fastai](notes/deepLearning/fastai-concepts-list.md)
 
 ## Utility
