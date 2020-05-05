@@ -37,12 +37,11 @@
 
 ## Miscellaneous
 - [atom text editor - cheatsheet](notes/misc/cheatsheet-atomTextEditor.md)
-- [aws - ec2 data science set up](notes/misc/aws-setup.md)
-- [aws cli - cheatsheet](notes/misc/awscli-cheatsheet.md)
 - [cli - command line - cheatsheet](notes/misc/cli-cheatsheet.md)
-- [concept - fastai classes](notes/misc/fastai-concept-list.md)
 - [git - cheatsheet](notes/misc/git-cheatsheet.md)
 - [git - .gitignore and untrack files](notes/misc/git-gitignore-untrack-files.md)
 - [git - add remote repository on github via commandline](notes/misc/git-add-project-to-GitHub.md)
 - [markdown - cheatsheet](notes/misc/markdown-cheatsheet.md)
+- [platform - aws - ec2 data science set up](notes/misc/aws-setup.md)
+- [platform - aws cli - cheatsheet](notes/misc/awscli-cheatsheet.md)
 - [platform - google cloud platform  - fastai](notes/misc/platform-google-cloud-fastai.md)
