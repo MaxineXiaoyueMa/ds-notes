@@ -223,19 +223,25 @@
                 
                 <h1 id="concept-deep-learning">concept - Deep Learning<a class="headerlink" href="#concept-deep-learning" title="Permanent link">&para;</a></h1>
 <h2 id="convolutional-neural-network">Convolutional Neural Network<a class="headerlink" href="#convolutional-neural-network" title="Permanent link">&para;</a></h2>
-<p>CONV layer is a set of filters that spatially slide across input volume and output dot product during each step.
-- <strong>why</strong>: much less parameters compared to a fully connected layer, parameter sharing, sparsity of connection
-- <strong>convolve</strong>: the action of sliding over width and height
-- <strong>local connectivity</strong>: each filter only look at input volume within the filter window, NOT fully connected
-- <strong>filter</strong>: matrix of size (f,f,c), f is mostly odd, c is the same as input volume depth (n,n,c)
-- <strong>depth</strong>: hyperparameter, number of filters, depth column, or fiber
-- <strong>stride</strong>: Step size when convolve the filter, mostly 1 or 2
-- <strong>pooling</strong>: reduce size of representation, speeds up computation, more robust features.
-    - hyperparameter: (f,f,s) s is step size
-    - output: n+2p-f+1 / s,
-        - Max Pooling: max(spatial filter)
-        - Average Pooling: less common, used to collapse
-- <strong>structure</strong>: input -&gt; layer 1 (conv1, pool1) -&gt; layer 2(conv2, pool2) -&gt; layer 3(fully connected), layer 4(FC) -&gt; softmax</p>
+<p>CONV layer is a set of filters that spatially slide across input volume and output dot product during each step.</p>
+<ul>
+<li><strong>why</strong>: much less parameters compared to a fully connected layer, parameter sharing, sparsity of connection</li>
+<li><strong>convolve</strong>: the action of sliding over width and height</li>
+<li><strong>local connectivity</strong>: each filter only look at input volume within the filter window, NOT fully connected</li>
+<li><strong>filter</strong>: matrix of size (f,f,c), f is mostly odd, c is the same as input volume depth (n,n,c)</li>
+<li><strong>depth</strong>: hyperparameter, number of filters, depth column, or fiber</li>
+<li><strong>stride</strong>: Step size when convolve the filter, mostly 1 or 2</li>
+<li><strong>pooling</strong>: reduce size of representation, speeds up computation, more robust features.<ul>
+<li>hyperparameter: (f,f,s) s is step size</li>
+<li>output: n+2p-f+1 / s,<ul>
+<li>Max Pooling: max(spatial filter)</li>
+<li>Average Pooling: less common, used to collapse</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>structure</strong>: input -&gt; layer 1 (conv1, pool1) -&gt; layer 2(conv2, pool2) -&gt; layer 3(fully connected), layer 4(FC) -&gt; softmax</li>
+</ul>
                 
                   
                 
