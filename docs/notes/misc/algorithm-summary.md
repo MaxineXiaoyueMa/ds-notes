@@ -65,6 +65,14 @@ Reference: http://cs229.stanford.edu/notes/cs229-notes2.pdf
      1. cluster similarities: adjusted Rand Index (pairs that two clusering agress over total pairs adjusted for randomness)
      2. how good the clusters are: silhouette score (using mean distance from each point to other points within the same cluster and mean distance from each point to points outside the same clusters. Good clustering result in small distance within cluster, and large distance outside cluster, final measure is close to 1.)
 
+Reference:
+- https://www.datarevenue.com/en-blog/building-a-city-recommender-for-nomads
+- https://towardsdatascience.com/beginners-recommendation-systems-with-python-ee1b08d2efb6
+- https://medium.com/data-science-101/movie-recommendation-system-content-filtering-7ba425ca0920
+- https://towardsdatascience.com/how-did-we-build-book-recommender-systems-in-an-hour-the-fundamentals-dfee054f978e
+- https://www.kaggle.com/gspmoreira/recommender-systems-in-python-101
+- https://towardsdatascience.com/building-a-content-based-recommender-system-for-hotels-in-seattle-d724f0a32070
+
 ## Modeling
 ### Model tuning
 1. Random search
@@ -72,3 +80,18 @@ Reference: http://cs229.stanford.edu/notes/cs229-notes2.pdf
 3. bayesian based optimization: "smartly" sample hyperparameter space by learning from previous trials. Gaussian process to poximate
 Reference: https://www.cs.cornell.edu/courses/cs4787/2019sp/notes/lecture16.pdf
 https://www.arxiv-vanity.com/papers/1012.2599/
+
+## Recommender System
+Prediction of personal preference, match between user and product/item/experience/tactics/friend/mate.
+- types:
+    - **content based**: robust to "cold start", recommendation based on similarities between items we want recommendation, e.g., I like item A, B is similar to A, so, I probably like B.
+    - **collaborative filtering**: recommendation based on similarities between personal tasts, e.g., he and i have similar tastes, so, if he likes it, then I will probably like it.
+- similarities:
+    - **cosine similarity**: dot product devided by the product of the norm of both vectors, linear kernel if vectors are already taken the norm in sklearn
+
+## Natural Language Processing (NLP)
+1. Feature Extraction: vectorization = text -> numerical transformation
+     1. **Bag of words**: tokenizing, counting, (normalizing)
+     2. **tfidf**: term weighting, term frequency (tf) times inverse document frequency (idf). idf is calculated as the log of number of documents devided by number of documents containing word, the more common the word, the less informational it is.
+          1. **n_gram**: order matters, 'like', and 'not like' mean opposite things, to preserve order, keep n_gram = 3
+          2. **stop_words**: common words that don't add information: the, an, is, etc.
