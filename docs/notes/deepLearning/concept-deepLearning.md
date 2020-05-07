@@ -1,7 +1,9 @@
 # concept - Deep Learning
 
 ## Convolutional Neural Network
+
 CONV layer is a set of filters that spatially slide across input volume and output dot product during each step.
+
 - **why**: much less parameters compared to a fully connected layer, parameter sharing, sparsity of connection
 - **convolve**: the action of sliding over width and height
 - **local connectivity**: each filter only look at input volume within the filter window, NOT fully connected
