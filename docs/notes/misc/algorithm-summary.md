@@ -82,15 +82,25 @@ Reference: https://www.cs.cornell.edu/courses/cs4787/2019sp/notes/lecture16.pdf
 https://www.arxiv-vanity.com/papers/1012.2599/
 
 ## Recommender System
-Prediction of personal preference, match between user and product/item/experience/tactics/friend/mate.
-- types:
-    - **content based**: robust to "cold start", recommendation based on similarities between items we want recommendation, e.g., I like item A, B is similar to A, so, I probably like B.
+Prediction of personal preference of items, match between user and product/item/experience/tactics/friend/mate.
+
+- type:
+    - **random**: random select, no "cold start",
+    - **most popular**: require some interaction data
+    - **content based**: robust to "cold start", recommendation based on similarities between items, e.g., I like item A, B is similar to A, so, I probably like B.
     - **collaborative filtering**: recommendation based on similarities between personal tasts, e.g., he and i have similar tastes, so, if he likes it, then I will probably like it.
-- similarities:
+- similarity:
     - **cosine similarity**: dot product devided by the product of the norm of both vectors, linear kernel if vectors are already taken the norm in sklearn
+- metric:
+    - **MAP@N**: getting all N items recomded correctly scores 1 per AP@N. Getting more right per N is better, and getting right ealier is better. sum (Precision@k * change in Recall@k) for k in N.
+
+**Reference**:
+- http://fastml.com/evaluating-recommender-systems/
+- https://web.stanford.edu/class/cs276/handouts/EvaluationNew-handout-6-per.pdf
 
 ## Natural Language Processing (NLP)
-1. Feature Extraction: vectorization = text -> numerical transformation
+0. **Preprocessing**:
+1. **Feature Extraction**: vectorization = text -> numerical transformation
      1. **Bag of words**: tokenizing, counting, (normalizing)
      2. **tfidf**: term weighting, term frequency (tf) times inverse document frequency (idf). idf is calculated as the log of number of documents devided by number of documents containing word, the more common the word, the less informational it is.
           1. **n_gram**: order matters, 'like', and 'not like' mean opposite things, to preserve order, keep n_gram = 3
