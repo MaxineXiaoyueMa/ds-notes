@@ -435,15 +435,31 @@ Reference: https://www.cs.cornell.edu/courses/cs4787/2019sp/notes/lecture16.pdf
 https://www.arxiv-vanity.com/papers/1012.2599/</li>
 </ol>
 <h2 id="recommender-system">Recommender System<a class="headerlink" href="#recommender-system" title="Permanent link">&para;</a></h2>
-<p>Prediction of personal preference, match between user and product/item/experience/tactics/friend/mate.
-- types:
-    - <strong>content based</strong>: robust to "cold start", recommendation based on similarities between items we want recommendation, e.g., I like item A, B is similar to A, so, I probably like B.
-    - <strong>collaborative filtering</strong>: recommendation based on similarities between personal tasts, e.g., he and i have similar tastes, so, if he likes it, then I will probably like it.
-- similarities:
-    - <strong>cosine similarity</strong>: dot product devided by the product of the norm of both vectors, linear kernel if vectors are already taken the norm in sklearn</p>
+<p>Prediction of personal preference of items, match between user and product/item/experience/tactics/friend/mate.</p>
+<ul>
+<li>type:<ul>
+<li><strong>random</strong>: random select, no "cold start",</li>
+<li><strong>most popular</strong>: require some interaction data</li>
+<li><strong>content based</strong>: robust to "cold start", recommendation based on similarities between items, e.g., I like item A, B is similar to A, so, I probably like B.</li>
+<li><strong>collaborative filtering</strong>: recommendation based on similarities between personal tasts, e.g., he and i have similar tastes, so, if he likes it, then I will probably like it.</li>
+</ul>
+</li>
+<li>similarity:<ul>
+<li><strong>cosine similarity</strong>: dot product devided by the product of the norm of both vectors, linear kernel if vectors are already taken the norm in sklearn</li>
+</ul>
+</li>
+<li>metric:<ul>
+<li><strong>MAP@N</strong>: getting all N items recomded correctly scores 1 per AP@N. Getting more right per N is better, and getting right ealier is better. sum (Precision@k * change in Recall@k) for k in N.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Reference</strong>:
+- http://fastml.com/evaluating-recommender-systems/
+- https://web.stanford.edu/class/cs276/handouts/EvaluationNew-handout-6-per.pdf</p>
 <h2 id="natural-language-processing-nlp">Natural Language Processing (NLP)<a class="headerlink" href="#natural-language-processing-nlp" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Feature Extraction: vectorization = text -&gt; numerical transformation<ol>
+<li><strong>Preprocessing</strong>:</li>
+<li><strong>Feature Extraction</strong>: vectorization = text -&gt; numerical transformation<ol>
 <li><strong>Bag of words</strong>: tokenizing, counting, (normalizing)</li>
 <li><strong>tfidf</strong>: term weighting, term frequency (tf) times inverse document frequency (idf). idf is calculated as the log of number of documents devided by number of documents containing word, the more common the word, the less informational it is.<ol>
 <li><strong>n_gram</strong>: order matters, 'like', and 'not like' mean opposite things, to preserve order, keep n_gram = 3</li>
