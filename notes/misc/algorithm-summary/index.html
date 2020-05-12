@@ -440,11 +440,18 @@ https://www.arxiv-vanity.com/papers/1012.2599/</li>
 <li>type:<ul>
 <li><strong>random</strong>: random select, no "cold start",</li>
 <li><strong>most popular</strong>: require some interaction data</li>
-<li><strong>content based</strong>: robust to "cold start", recommendation based on similarities between items, e.g., I like item A, B is similar to A, so, I probably like B.</li>
-<li><strong>collaborative filtering</strong>: recommendation based on similarities between personal tasts, e.g., he and i have similar tastes, so, if he likes it, then I will probably like it.</li>
+<li><strong>content based</strong>: robust to "cold start", recommendation based on similarities between items, i.e., "I like item A, B is similar to A, so, I probably like B", e.g., "if you bought this, you may also like these...", need one user interaction to start.</li>
+<li><strong>collaborative filtering</strong>: recommendation based on similarities between personal tasts, e.g., he and I have similar tastes, so, if he likes it, then I will probably like it.<ul>
+<li><strong>item based</strong>: if item A is liked by me, item A is also liked by him, and he likes item B, then, I will probably like B. e.g. "people who purchsed this also purchased these..."<ul>
+<li><strong>vs. content based</strong>: item based CF uses implicit similarity between items with interaction/taste as medium, content based uses direct similarity between items</li>
 </ul>
 </li>
-<li>similarity:<ul>
+<li><strong>user based</strong>: e.g. "customers like you also likes"</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>similarity measures:<ul>
 <li><strong>cosine similarity</strong>: dot product devided by the product of the norm of both vectors, linear kernel if vectors are already taken the norm in sklearn</li>
 </ul>
 </li>
@@ -458,7 +465,17 @@ https://www.arxiv-vanity.com/papers/1012.2599/</li>
 - https://web.stanford.edu/class/cs276/handouts/EvaluationNew-handout-6-per.pdf</p>
 <h2 id="natural-language-processing-nlp">Natural Language Processing (NLP)<a class="headerlink" href="#natural-language-processing-nlp" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Preprocessing</strong>:</li>
+<li><strong>Preprocessing</strong>:<ol>
+<li><strong>Tokenization</strong>:</li>
+<li><strong>Normalization</strong>:<ol>
+<li>stemming: running -&gt; run</li>
+<li>lemmatization: better -&gt; good
+  3.</li>
+</ol>
+</li>
+<li><strong>Substitution</strong>:</li>
+</ol>
+</li>
 <li><strong>Feature Extraction</strong>: vectorization = text -&gt; numerical transformation<ol>
 <li><strong>Bag of words</strong>: tokenizing, counting, (normalizing)</li>
 <li><strong>tfidf</strong>: term weighting, term frequency (tf) times inverse document frequency (idf). idf is calculated as the log of number of documents devided by number of documents containing word, the more common the word, the less informational it is.<ol>
