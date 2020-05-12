@@ -87,9 +87,12 @@ Prediction of personal preference of items, match between user and product/item/
 - type:
     - **random**: random select, no "cold start",
     - **most popular**: require some interaction data
-    - **content based**: robust to "cold start", recommendation based on similarities between items, e.g., I like item A, B is similar to A, so, I probably like B.
-    - **collaborative filtering**: recommendation based on similarities between personal tasts, e.g., he and i have similar tastes, so, if he likes it, then I will probably like it.
-- similarity:
+    - **content based**: robust to "cold start", recommendation based on similarities between items, i.e., "I like item A, B is similar to A, so, I probably like B", e.g., "if you bought this, you may also like these...", need one user interaction to start.
+    - **collaborative filtering**: recommendation based on similarities between personal tasts, e.g., he and I have similar tastes, so, if he likes it, then I will probably like it.
+        - **item based**: if item A is liked by me, item A is also liked by him, and he likes item B, then, I will probably like B. e.g. "people who purchsed this also purchased these..."
+            - **vs. content based**: item based CF uses implicit similarity between items with interaction/taste as medium, content based uses direct similarity between items
+        - **user based**: e.g. "customers like you also likes"
+- similarity measures:
     - **cosine similarity**: dot product devided by the product of the norm of both vectors, linear kernel if vectors are already taken the norm in sklearn
 - metric:
     - **MAP@N**: getting all N items recomded correctly scores 1 per AP@N. Getting more right per N is better, and getting right ealier is better. sum (Precision@k * change in Recall@k) for k in N.
@@ -100,6 +103,12 @@ Prediction of personal preference of items, match between user and product/item/
 
 ## Natural Language Processing (NLP)
 0. **Preprocessing**:
+     1. **Tokenization**:
+     2. **Normalization**:
+          1. stemming: running -> run
+          2. lemmatization: better -> good
+          3.
+     3. **Substitution**:
 1. **Feature Extraction**: vectorization = text -> numerical transformation
      1. **Bag of words**: tokenizing, counting, (normalizing)
      2. **tfidf**: term weighting, term frequency (tf) times inverse document frequency (idf). idf is calculated as the log of number of documents devided by number of documents containing word, the more common the word, the less informational it is.
