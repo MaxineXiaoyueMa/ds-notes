@@ -87,11 +87,16 @@ Prediction of personal preference of items, match between user and product/item/
 - type:
     - **random**: random select, no "cold start",
     - **most popular**: require some interaction data
-    - **content based**: robust to "cold start", recommendation based on similarities between items, i.e., "I like item A, B is similar to A, so, I probably like B", e.g., "if you bought this, you may also like these...", need one user interaction to start.
-    - **collaborative filtering**: recommendation based on similarities between personal tasts, e.g., he and I have similar tastes, so, if he likes it, then I will probably like it.
-        - **item based**: if item A is liked by me, item A is also liked by him, and he likes item B, then, I will probably like B. e.g. "people who purchsed this also purchased these..."
-            - **vs. content based**: item based CF uses implicit similarity between items with interaction/taste as medium, content based uses direct similarity between items
-        - **user based**: e.g. "customers like you also likes"
+    - **Content Based**: robust to "cold start", recommendation based on similarities between items, i.e., "I like item A, B is similar to A, so, I probably like B", e.g., "if you bought this, you may also like these...", need one user interaction to start.
+    - **Collaborative Filtering**: recommendation based on similarities between personal tasts, e.g., he and I have similar tastes, so, if he likes it, then I will probably like it.
+        - **Memory based**: uses entire raitngs table.
+            - **Item based**: guess my rating for A by finding items most similar to A and calculate a (weighted) average of my ratings for most similar items. The similarity between items A & B is calculated with ratings from users who have rated A & B both.
+                - **vs. content based**: item based CF uses implicit similarity between items with interaction/taste as medium, content based uses direct similarity between items
+            - **User based**: e.g. "customers like you also likes"
+        - **Model Based**:
+            - **Matrix Factorization**:
+            - **Deep Learning**
+        - **Hybrid**:
 - similarity measures:
     - **cosine similarity**: dot product devided by the product of the norm of both vectors, linear kernel if vectors are already taken the norm in sklearn
 - metric:
