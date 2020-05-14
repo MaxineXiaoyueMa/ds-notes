@@ -89,12 +89,12 @@ Prediction of personal preference of items, match between user and product/item/
     - **most popular**: require some interaction data
     - **Content Based**: robust to "cold start", recommendation based on similarities between items, i.e., "I like item A, B is similar to A, so, I probably like B", e.g., "if you bought this, you may also like these...", need one user interaction to start.
     - **Collaborative Filtering**: recommendation based on similarities between personal tasts, e.g., he and I have similar tastes, so, if he likes it, then I will probably like it.
-        - **Memory based**: uses entire raitngs table.
+        - **Memory based**: uses entire raitngs table, KNN
             - **Item based**: guess my rating for A by finding items most similar to A and calculate a (weighted) average of my ratings for most similar items. The similarity between items A & B is calculated with ratings from users who have rated A & B both.
                 - **vs. content based**: item based CF uses implicit similarity between items with interaction/taste as medium, content based uses direct similarity between items
             - **User based**: e.g. "customers like you also likes"
         - **Model Based**:
-            - **Matrix Factorization**:
+            - **Matrix Factorization**: SVD
             - **Deep Learning**
         - **Hybrid**:
 - similarity measures:
