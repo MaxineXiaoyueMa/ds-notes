@@ -95,6 +95,8 @@ Prediction of personal preference of items, match between user and product/item/
             - **User based**: e.g. "customers like you also likes"
         - **Model Based**:
             - **Matrix Factorization**: SVD
+                - SGD (stochastic gradient descent)
+                - ALS (alternating Least Squares)
             - **Deep Learning**
         - **Hybrid**:
 - similarity measures:
@@ -119,3 +121,8 @@ Prediction of personal preference of items, match between user and product/item/
      2. **tfidf**: term weighting, term frequency (tf) times inverse document frequency (idf). idf is calculated as the log of number of documents devided by number of documents containing word, the more common the word, the less informational it is.
           1. **n_gram**: order matters, 'like', and 'not like' mean opposite things, to preserve order, keep n_gram = 3
           2. **stop_words**: common words that don't add information: the, an, is, etc.
+
+## Dimensionaility reduction
+1. **PCA**: Project high dimensional data on to smaller subspace that keeps most of the information or variance.
+     1. **LSA - NLP**: when applied in NLP tasks, it can be called as Latent semantic Analysis. A good example can be found here: https://www.stat.cmu.edu/~cshalizi/uADA/12/lectures/ch18.pdf
+     2. **Components loadings**: how does each variable project on to the Principle Components can help us understand the PCs better.
