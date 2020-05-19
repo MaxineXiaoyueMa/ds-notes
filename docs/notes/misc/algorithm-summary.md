@@ -53,7 +53,16 @@ Reference: http://cs229.stanford.edu/notes/cs229-notes2.pdf
 7. **Support Vector Machine**
 
 #### Classification Metrics
-1. **ROC Curve**: rank observation from the most likely to least likely, a good separater will have have score
+1. **ROC-AUC**: Average rank (position) of positive items in a sequence of negative items. A perfect ranker that ranks all positive items higher than negative ones has value 1. Random guess has value 0.5.
+
+To plot:
+    1. Rank observation from the most likely to least likely,
+    2. Plot FPR(**F**alse **P**ostive **R**ate = False Positive/Total False) on the horizontal axis, Recall on the vertical axis.
+    3. Move up on recall for each True Postive item, and move right on FPR for each False Positive.
+
+Below is a great illustration from [a great article](http://fouryears.eu/2011/10/12/roc-area-under-the-curve-explained/comment-page-1/) on ROC-AUC curve, fantastic source.
+![ROC-AUC](http://fouryears.eu/2011/10/12/roc-area-under-the-curve-explained/roc1-2/)
+credit: Konstantin Tretyakov
 2.**Accuracy**: default metric for classification models, measure how many observations are correctly classified with default threshold 0.5, not a good measure for imbalanced data, or threshold other than 0.5.
 3. **Precision-Recall Curve**:
 
@@ -98,7 +107,7 @@ Prediction of personal preference of items, match between user and product/item/
                 - SGD (stochastic gradient descent)
                 - ALS (alternating Least Squares)
             - **Deep Learning**
-        - **Hybrid**:
+        - **Hybrid**: Matrix Factorization + User/Item metadata, e.g., lightFM
 - similarity measures:
     - **cosine similarity**: dot product devided by the product of the norm of both vectors, linear kernel if vectors are already taken the norm in sklearn
 - metric:
@@ -107,6 +116,8 @@ Prediction of personal preference of items, match between user and product/item/
 **Reference**:
 - http://fastml.com/evaluating-recommender-systems/
 - https://web.stanford.edu/class/cs276/handouts/EvaluationNew-handout-6-per.pdf
+- lightFM official paper https://arxiv.org/pdf/1507.08439.pdf
+-
 
 ## Natural Language Processing (NLP)
 0. **Preprocessing**:
