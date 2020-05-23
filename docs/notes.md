@@ -5,13 +5,11 @@
 - [python - basics - strying manipulation](notes/python/python-basics-string-manipulation.md)
 
 ## Data Wrangling
-- [pandas - pd.read_csv file path referencing](notes/dataWrangling/pandas-read_csv-file-path-examples.md)
-- [pandas - drop values](notes/dataWrangling/python-pandas-drop-columns-rows.ipynb)
-- [pandas - selecting by row and column](notes/dataWrangling/python-pandas-dataframe-select-by-row-and-column.ipynb)
-- [pandas - map string to number](notes/dataWrangling/python-pandas-how-to-map-string-to-number.ipynb)
-- [pandas - pd.melt wide form to long form](notes/dataWrangling/pandas-melt-wide-form-to-long-form.md)
-- [numpy - one hot encoding](notes/dataWrangling/python-numpy-how-to-do-one-hot-encoding.ipynb)
-- [numpy - np.sum vs. df.sum](notes/dataWrangling/numpy-sum-vs-pandas-sum)
+---|---
+- [pandas - pd.read_csv file path referencing](notes/dataWrangling/pandas-read_csv-file-path-examples.md)|- [pandas - drop values](notes/dataWrangling/python-pandas-drop-columns-rows.ipynb)
+- [pandas - selecting by row and column](notes/dataWrangling/python-pandas-dataframe-select-by-row-and-column.ipynb)|- [pandas - map string to number](notes/dataWrangling/python-pandas-how-to-map-string-to-number.ipynb)
+- [pandas - pd.melt wide form to long form](notes/dataWrangling/pandas-melt-wide-form-to-long-form.md)|
+- [numpy - one hot encoding](notes/dataWrangling/python-numpy-how-to-do-one-hot-encoding.ipynb)|- [numpy - np.sum vs. df.sum](notes/dataWrangling/numpy-sum-vs-pandas-sum)
 
 ## Visualization
 - [matplotlib - plt.plot basic properties](notes/visualization/matplotlib-plt.plot-basics.ipynb)
