@@ -300,33 +300,25 @@
 <p>where:
   <code>--graph</code> give visualization of branches,
   <code>--oneline</code> allows tighter and tidier presentation</p>
-</li>
-</ul>
-<div class="codehilite"><pre><span></span><code>    * <span class="p">|</span> 7d7ee90 update readme.md
-    <span class="p">|</span>/
-    * 2d26671 update readme.md
-</code></pre></div>
-
-
-<div class="codehilite"><pre><span></span><code>vs. without `--oneline`
-</code></pre></div>
-
-
-<div class="codehilite"><pre><span></span><code>    * <span class="p">|</span> commit 7d7ee90df266f08201275427623d78d316e5b959
-    <span class="p">|</span>/  Author: Xiaoyue&lt;xxxxxxXiaoyueMa@users.noreply.github.com&gt;
-    <span class="p">|</span>   Date:   Fri Mar <span class="m">20</span> <span class="m">18</span>:52:23 <span class="m">2020</span> -0700
-    <span class="p">|</span>
-    <span class="p">|</span>       update readme.md
-    <span class="p">|</span>
+<p>with <code>--oneline</code>:</p>
+<p><code>sh
+    * | 7d7ee90 update readme.md
+    |/
+    * 2d26671 update readme.md</code></p>
+<p>without <code>--oneline</code>:</p>
+<p><code>sh
+    * | commit 7d7ee90df266f08201275427623d78d316e5b959
+    |/  Author: Xiaoyue&lt;xxxxxxXiaoyueMa@users.noreply.github.com&gt;
+    |   Date:   Fri Mar 20 18:52:23 2020 -0700
+    |
+    |       update readme.md
+    |
     * commit 2d26671d93cfad488e18804f071d409b9dfa17ff
-    <span class="p">|</span> Author: Xiaoyue &lt;xxxxxxXiaoyueMa@users.noreply.github.com&gt;
-    <span class="p">|</span> Date:   Fri Mar <span class="m">20</span> <span class="m">18</span>:35:16 <span class="m">2020</span> -0700
-</code></pre></div>
-
-
-<ul>
+    | Author: Xiaoyue &lt;xxxxxxXiaoyueMa@users.noreply.github.com&gt;
+    | Date:   Fri Mar 20 18:35:16 2020 -0700</code></p>
+</li>
 <li>
-<p>compare the difference between two versions::
+<p>compare the difference between two versions:
 <code>git diff first_id second_id</code></p>
 </li>
 <li>
