@@ -38,25 +38,29 @@
       `--graph` give visualization of branches,
       `--oneline` allows tighter and tidier presentation
 
-```sh
-    * | 7d7ee90 update readme.md
-    |/
-    * 2d26671 update readme.md
-```
-    vs. without `--oneline`
+    with `--oneline`:
 
-```sh
-    * | commit 7d7ee90df266f08201275427623d78d316e5b959
-    |/  Author: Xiaoyue<xxxxxxXiaoyueMa@users.noreply.github.com>
-    |   Date:   Fri Mar 20 18:52:23 2020 -0700
-    |
-    |       update readme.md
-    |
-    * commit 2d26671d93cfad488e18804f071d409b9dfa17ff
-    | Author: Xiaoyue <xxxxxxXiaoyueMa@users.noreply.github.com>
-    | Date:   Fri Mar 20 18:35:16 2020 -0700
-```
-- compare the difference between two versions::
+    ```sh
+        * | 7d7ee90 update readme.md
+        |/
+        * 2d26671 update readme.md
+    ```
+
+    without `--oneline`:
+
+    ```sh
+        * | commit 7d7ee90df266f08201275427623d78d316e5b959
+        |/  Author: Xiaoyue<xxxxxxXiaoyueMa@users.noreply.github.com>
+        |   Date:   Fri Mar 20 18:52:23 2020 -0700
+        |
+        |       update readme.md
+        |
+        * commit 2d26671d93cfad488e18804f071d409b9dfa17ff
+        | Author: Xiaoyue <xxxxxxXiaoyueMa@users.noreply.github.com>
+        | Date:   Fri Mar 20 18:35:16 2020 -0700
+    ```
+
+  - compare the difference between two versions:
 `git diff first_id second_id`
 
 - compare the difference between working directory and staging area:

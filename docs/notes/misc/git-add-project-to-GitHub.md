@@ -1,7 +1,7 @@
-# How to add project to git with Gibhub via commandline
+# How to add a project to Gibhub
 
 ## Preparation:
-- **Check whether git is installed on your machine:** `git --version`
+- **Check git is installed on your machine:** `git --version`
 - **Download the latest git:** `git clone https://github.com/git/git`
 
 ## Create a new repository(repo) in GitHub
@@ -27,11 +27,11 @@ i.e., all files in the curent directory to the repo: `git add --all`
 ## Troubleshoot error message: 'git@github.com: Permission denied (publickey)'.
 1. Check for existing ssh key: https://help.github.com/en/github/authenticating-to-github/error-permission-denied-publickey
 2. Generate a new ssh key: https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
-3. Add the ssh key to Github account: https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
-4.
+3. Add the ssh key to Github account: https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-accountå
 
 
 
 Reference:
-1. Adding an existing project to GitHub using the command line:
+
+- Adding an existing project to GitHub using the command line:
 https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line
