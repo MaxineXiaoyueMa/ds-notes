@@ -202,6 +202,39 @@
     fasiai library
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-data-sample-data" class="md-nav__link">
+    download data, sample data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-data" class="md-nav__link">
+    sample data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -247,10 +280,17 @@
 most example codes are from the fast.ai notebooks</p>
 </blockquote>
 <h2 id="fasiai-library">fasiai library<a class="headerlink" href="#fasiai-library" title="Permanent link">&para;</a></h2>
+<h3 id="download-data-sample-data">download data, sample data<a class="headerlink" href="#download-data-sample-data" title="Permanent link">&para;</a></h3>
+<h4 id="sample-data">sample data<a class="headerlink" href="#sample-data" title="Permanent link">&para;</a></h4>
 <ul>
+<li>image: <code>path = untar_data(URLs.PETS)</code></li>
+<li>
+<p>nlp: <code>path = untar_data(URLs.IMDB_SAMPLE)</code></p>
+</li>
 <li>
 <p>fastai.datasets.untar_data(): download file to some convenient path, untar it, return the value of path
 <code>path = untar_data(URLs.PETS); path</code>
+<code>path = untar_data(URLs.IMDB_SAMPLE)</code>
 fastai.vision.data()</p>
 </li>
 <li>
@@ -262,42 +302,82 @@ fastai.vision.data()</p>
 </code></pre></div>
 
 
-<p><code>python
-[PosixPath('/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/american_bulldog_146.jpg'),
- PosixPath('/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/german_shorthaired_137.jpg'),
- PosixPath('/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/japanese_chin_139.jpg'),
- PosixPath('/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/great_pyrenees_121.jpg'),
- PosixPath('/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/Bombay_151.jpg')]</code>
-- DataBunch: general fastai concept for data, subclasses include ImageDataBunch, contains 2 or 3 datasets(train/val/(test)), each dataset contains images/texts/tabular data and labels
- - <code>ImageDataBunch</code>: object,
-   - <code>ImageDataBunch.from_name_re</code>: method that extracts labels from the names
-   - <code>data = ImageDataBunch.from_name_re(path_img, fnames, pat, ds_tfms=get_transforms(), size=224, bs=bs)</code>
-      path_img: a path containing images
-      fnames: a list of file names
-      pat: a regular expression (i.e. pattern) to be used to extract the label from the file name
-      ds_tfm: we'll talk about transforms later
-      size: what size images do you want to work with.
-      bs: batch size (i.e. number of images processed at a time). Currently, 64, Set to 16 if memory is not enough.
-    - <code>data.normalize(imagenet_stats)</code>: all data about the same size
-    - <code>data.show_batch(rows = 3, figsize = (7,6))</code>: watch for borders, texts, odd rotation
-    - <code>data.classes</code>: all possible label names</p>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/american_bulldog_146.jpg&#39;</span><span class="p">),</span>
+ <span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/german_shorthaired_137.jpg&#39;</span><span class="p">),</span>
+ <span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/japanese_chin_139.jpg&#39;</span><span class="p">),</span>
+ <span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/great_pyrenees_121.jpg&#39;</span><span class="p">),</span>
+ <span class="n">PosixPath</span><span class="p">(</span><span class="s1">&#39;/data1/jhoward/git/course-v3/nbs/dl1/data/oxford-iiit-pet/images/Bombay_151.jpg&#39;</span><span class="p">)]</span>
+ <span class="err">```</span>
+
+<span class="c1">### DataBunch</span>
+<span class="n">DataBunch</span><span class="p">:</span> <span class="n">general</span> <span class="n">fastai</span> <span class="n">concept</span> <span class="k">for</span> <span class="n">data</span><span class="p">,</span> <span class="n">subclasses</span> <span class="n">include</span> <span class="n">ImageDataBunch</span><span class="p">,</span> <span class="n">contains</span> <span class="mi">2</span> <span class="ow">or</span> <span class="mi">3</span> <span class="n">datasets</span><span class="p">(</span><span class="n">train</span><span class="o">/</span><span class="n">val</span><span class="o">/</span><span class="p">(</span><span class="n">test</span><span class="p">)),</span> <span class="n">each</span> <span class="n">dataset</span> <span class="n">contains</span> <span class="n">images</span><span class="o">/</span><span class="n">texts</span><span class="o">/</span><span class="n">tabular</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">labels</span>
+ <span class="o">-</span> <span class="err">`</span><span class="n">ImageDataBunch</span><span class="err">`</span><span class="p">:</span> <span class="nb">object</span><span class="p">,</span>
+   <span class="o">-</span> <span class="err">`</span><span class="n">ImageDataBunch</span><span class="o">.</span><span class="n">from_name_re</span><span class="err">`</span><span class="p">:</span> <span class="n">method</span> <span class="n">that</span> <span class="n">extracts</span> <span class="n">labels</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">names</span>
+   <span class="o">-</span> <span class="err">`</span><span class="n">data</span> <span class="o">=</span> <span class="n">ImageDataBunch</span><span class="o">.</span><span class="n">from_name_re</span><span class="p">(</span><span class="n">path_img</span><span class="p">,</span> <span class="n">fnames</span><span class="p">,</span> <span class="n">pat</span><span class="p">,</span> <span class="n">ds_tfms</span><span class="o">=</span><span class="n">get_transforms</span><span class="p">(),</span> <span class="n">size</span><span class="o">=</span><span class="mi">224</span><span class="p">,</span> <span class="n">bs</span><span class="o">=</span><span class="n">bs</span><span class="p">)</span><span class="err">`</span>
+      <span class="n">path_img</span><span class="p">:</span> <span class="n">a</span> <span class="n">path</span> <span class="n">containing</span> <span class="n">images</span>
+      <span class="n">fnames</span><span class="p">:</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">file</span> <span class="n">names</span>
+      <span class="n">pat</span><span class="p">:</span> <span class="n">a</span> <span class="n">regular</span> <span class="n">expression</span> <span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">pattern</span><span class="p">)</span> <span class="n">to</span> <span class="n">be</span> <span class="n">used</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">the</span> <span class="n">label</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">file</span> <span class="n">name</span>
+      <span class="n">ds_tfm</span><span class="p">:</span> <span class="n">we</span><span class="s1">&#39;ll talk about transforms later</span>
+      <span class="n">size</span><span class="p">:</span> <span class="n">what</span> <span class="n">size</span> <span class="n">images</span> <span class="n">do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">work</span> <span class="k">with</span><span class="o">.</span>
+      <span class="n">bs</span><span class="p">:</span> <span class="n">batch</span> <span class="n">size</span> <span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">number</span> <span class="n">of</span> <span class="n">images</span> <span class="n">processed</span> <span class="n">at</span> <span class="n">a</span> <span class="n">time</span><span class="p">)</span><span class="o">.</span> <span class="n">Currently</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">Set</span> <span class="n">to</span> <span class="mi">16</span> <span class="k">if</span> <span class="n">memory</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">enough</span><span class="o">.</span>
+    <span class="o">-</span> <span class="err">`</span><span class="n">data</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">imagenet_stats</span><span class="p">)</span><span class="err">`</span><span class="p">:</span> <span class="nb">all</span> <span class="n">data</span> <span class="n">about</span> <span class="n">the</span> <span class="n">same</span> <span class="n">size</span>
+    <span class="o">-</span> <span class="err">`</span><span class="n">data</span><span class="o">.</span><span class="n">show_batch</span><span class="p">(</span><span class="n">rows</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span><span class="err">`</span><span class="p">:</span> <span class="n">watch</span> <span class="k">for</span> <span class="n">borders</span><span class="p">,</span> <span class="n">texts</span><span class="p">,</span> <span class="n">odd</span> <span class="n">rotation</span>
+    <span class="o">-</span> <span class="err">`</span><span class="n">data</span><span class="o">.</span><span class="n">classes</span><span class="err">`</span><span class="p">:</span> <span class="nb">all</span> <span class="n">possible</span> <span class="n">label</span> <span class="n">names</span>
+
+<span class="o">-</span> <span class="n">Learner</span><span class="p">:</span> <span class="n">general</span> <span class="n">concept</span> <span class="k">for</span> <span class="n">things</span> <span class="n">that</span> <span class="n">can</span> <span class="n">learn</span> <span class="n">to</span> <span class="n">fit</span> <span class="n">a</span> <span class="n">model</span><span class="p">,</span> <span class="n">subclasses</span> <span class="n">include</span> <span class="n">convnet</span> <span class="n">learner</span> <span class="n">that</span> <span class="n">can</span> <span class="n">create</span> <span class="n">a</span> <span class="n">convolutional</span> <span class="n">neural</span> <span class="n">network</span>
+  <span class="o">-</span> <span class="err">`</span><span class="n">learn</span> <span class="o">=</span> <span class="n">cnn_learner</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">resnet34</span><span class="p">,</span> <span class="n">metric</span> <span class="o">=</span> <span class="n">error_rate</span><span class="p">)</span><span class="err">`</span> <span class="p">:</span> <span class="n">data</span> <span class="o">=</span> <span class="n">a</span> <span class="n">data</span> <span class="n">bunch</span><span class="p">,</span> <span class="n">arch</span> <span class="o">=</span> <span class="n">architecture</span><span class="p">,</span> <span class="n">metrics</span> <span class="ow">is</span> <span class="n">what</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="nb">print</span> <span class="n">out</span> <span class="k">while</span> <span class="n">training</span>
+  <span class="o">-</span> <span class="err">`</span><span class="n">learn</span><span class="o">.</span><span class="n">fit_one_cycle</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="err">`</span><span class="p">:</span> <span class="n">add</span> <span class="n">a</span> <span class="n">few</span> <span class="n">extra</span> <span class="n">layers</span> <span class="n">to</span> <span class="n">the</span> <span class="n">end</span><span class="p">,</span> <span class="ow">and</span> <span class="n">only</span> <span class="n">train</span> <span class="n">those</span>
+  <span class="o">-</span> <span class="err">`</span><span class="n">learn</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;stage-1&#39;</span><span class="p">)</span><span class="err">`</span><span class="p">:</span> <span class="n">save</span> <span class="n">the</span> <span class="n">weights</span> <span class="n">names</span> <span class="n">stage</span><span class="o">-</span><span class="mi">1</span>
+  <span class="o">-</span> <span class="err">`</span><span class="n">learn</span><span class="o">.</span><span class="n">unfreeze</span><span class="p">()</span><span class="err">`</span><span class="p">:</span> <span class="n">train</span> <span class="n">the</span> <span class="n">whole</span> <span class="n">model</span>
+  <span class="o">-</span> <span class="err">`</span><span class="n">learn</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;stage-1&#39;</span><span class="p">)</span><span class="err">`</span><span class="p">:</span> <span class="n">load</span> <span class="n">the</span> <span class="n">weights</span> <span class="n">form</span> <span class="n">before</span>
+  <span class="o">-</span> <span class="err">`</span><span class="n">learn</span><span class="o">.</span><span class="n">lr_find</span><span class="p">()</span><span class="err">`</span><span class="p">:</span> <span class="n">how</span> <span class="n">fast</span> <span class="n">can</span> <span class="n">I</span> <span class="n">train</span> <span class="n">without</span> <span class="n">overshooting</span>
+
+<span class="o">-</span> <span class="k">class</span> <span class="nc">interpretation</span>
+  <span class="o">-</span> <span class="err">`</span><span class="n">interp</span> <span class="o">=</span> <span class="n">ClassificationInterpretation</span><span class="o">.</span><span class="n">from_learner</span><span class="p">(</span><span class="n">learn</span><span class="p">)</span><span class="err">`</span>
+  <span class="o">-</span> <span class="err">`</span><span class="n">interp</span><span class="o">.</span><span class="n">plot_top_losses</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">11</span><span class="p">))</span><span class="err">`</span>
+  <span class="o">-</span> <span class="err">`</span><span class="n">interp</span><span class="o">.</span><span class="n">most_confused</span><span class="p">(</span><span class="n">min_val</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="err">`</span>
+
+<span class="c1">## Natural Language Processing (NLP tasks) - Week 4</span>
+<span class="o">**</span><span class="n">Transfer</span> <span class="n">learning</span> <span class="k">for</span> <span class="n">NLP</span> <span class="n">tasks</span> <span class="n">starts</span> <span class="k">with</span> <span class="n">a</span> <span class="n">language</span> <span class="n">model</span><span class="p">:</span> <span class="n">pre</span> <span class="n">trained</span> <span class="n">model</span> <span class="n">Wikitext</span> <span class="mi">103</span><span class="p">,</span> <span class="n">then</span> <span class="n">fine</span> <span class="n">tune</span> <span class="n">within</span> <span class="n">interested</span> <span class="n">domain</span> <span class="p">(</span><span class="bp">self</span> <span class="n">supervised</span> <span class="n">learning</span><span class="p">),</span> <span class="k">finally</span> <span class="n">apply</span> <span class="n">to</span> <span class="n">specific</span> <span class="n">tasks</span><span class="o">.**</span>
+<span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">fine</span> <span class="n">tune</span> <span class="k">with</span> <span class="n">movie</span> <span class="n">reviews</span><span class="p">,</span> <span class="n">model</span> <span class="n">learns</span> <span class="s1">&#39;reviews and what reviews describe&#39;</span><span class="p">,</span> <span class="n">which</span> <span class="n">then</span> <span class="n">help</span> <span class="k">with</span> <span class="n">sentiment</span> <span class="n">analysis</span>
+
+<span class="o">-</span> <span class="o">**</span><span class="n">Language</span> <span class="n">Model</span><span class="o">**</span><span class="p">:</span> <span class="n">predict</span> <span class="n">what</span> <span class="n">the</span> <span class="nb">next</span> <span class="n">word</span> <span class="ow">is</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">sentence</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="s1">&#39;auto complete&#39;</span>
+<span class="o">-</span> <span class="o">**</span><span class="n">Wikitext</span> <span class="mi">103</span><span class="o">**</span><span class="p">:</span> <span class="n">subset</span> <span class="n">of</span> <span class="n">most</span> <span class="n">of</span> <span class="n">the</span> <span class="n">largest</span> <span class="n">articles</span> <span class="kn">from</span> <span class="nn">Wikipedia</span><span class="p">,</span> <span class="mi">1</span> <span class="n">billion</span> <span class="n">tokens</span><span class="p">,</span> <span class="n">model</span> <span class="n">learns</span> <span class="s1">&#39;language and what language describes&#39;</span>
+
+<span class="c1">### fastai NLP basic process</span>
+<span class="o">-</span> <span class="kn">import</span> <span class="nn">module</span><span class="p">:</span> <span class="err">`</span><span class="kn">from</span> <span class="nn">fastai.text</span> <span class="kn">import</span> <span class="o">*</span><span class="err">`</span>
+<span class="o">-</span> <span class="n">download</span> <span class="n">data</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">nlp</span> <span class="n">sample</span><span class="p">,</span> <span class="n">imdb</span> <span class="mi">10</span><span class="n">k</span> <span class="n">sample</span><span class="p">:</span> <span class="err">`</span><span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">IMDB_SAMPLE</span><span class="p">)</span><span class="err">`</span><span class="p">,</span> <span class="n">review</span><span class="p">,</span> <span class="n">sentiment</span><span class="p">,</span> <span class="n">trainflag</span>
+    <span class="o">-</span> <span class="n">imdb</span> <span class="n">whole</span><span class="p">:</span> <span class="err">`</span><span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">IMDB</span><span class="p">)</span><span class="err">`</span>
+<span class="o">-</span> <span class="n">create</span> <span class="n">text</span> <span class="n">databunch</span><span class="p">:</span>
+    <span class="o">-</span> <span class="err">`</span><span class="n">TextDataBunch</span><span class="err">`</span><span class="p">:</span> <span class="err">`</span><span class="n">data_lm</span> <span class="o">=</span> <span class="n">TextDataBunch</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;texts.csv&#39;</span><span class="p">)</span><span class="err">`</span><span class="p">,</span> <span class="n">where</span> <span class="o">**</span><span class="n">tokenization</span> <span class="o">&amp;</span> <span class="n">numeralization</span><span class="o">**</span> <span class="n">where</span> <span class="n">performed</span><span class="p">,</span> <span class="ow">and</span> <span class="n">save</span> <span class="n">the</span> <span class="n">preproceed</span> <span class="n">databunch</span><span class="p">:</span> <span class="err">`</span><span class="n">data_lm</span><span class="o">.</span><span class="n">save</span><span class="p">()</span><span class="err">`</span>
+    <span class="o">-</span> <span class="n">datablock</span> <span class="n">API</span><span class="p">:</span>
+    <span class="o">-</span>       <span class="err">`</span><span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">TextList</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;texts.csv&#39;</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="s1">&#39;text&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split_from_df</span><span class="p">(</span><span class="n">col</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">label_from_df</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">databunch</span><span class="p">())</span><span class="err">`</span>
+<span class="err">```</span><span class="n">python</span>
+<span class="c1"># for imdb whole set</span>
+<span class="n">data_lm</span> <span class="o">=</span> <span class="p">(</span><span class="n">TextList</span><span class="o">.</span><span class="n">from_folder</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+          <span class="c1">#Inputs: all the text files in path</span>
+          <span class="o">.</span><span class="n">filter_by_folder</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;unsup&#39;</span><span class="p">])</span>
+          <span class="c1">#We may have other temp folders that contain text files so we only keep what&#39;s in train and test</span>
+          <span class="o">.</span><span class="n">split_by_rand_pct</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+          <span class="c1">#We randomly split and keep 10% (10,000 reviews) for validation</span>
+          <span class="o">.</span><span class="n">label_for_lm</span><span class="p">()</span>
+          <span class="c1">#We want to do a language model so we label accordingly</span>
+          <span class="o">.</span><span class="n">databunch</span><span class="p">(</span><span class="n">bs</span><span class="o">=</span><span class="n">bs</span><span class="p">))</span>
+<span class="n">data_lm</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;data_lm.pkl&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+
 <ul>
-<li>Learner: general concept for things that can learn to fit a model, subclasses include convnet learner that can create a convolutional neural network</li>
-<li><code>learn = cnn_learner(data, models.resnet34, metric = error_rate)</code> : data = a data bunch, arch = architecture, metrics is what you want to print out while training</li>
-<li><code>learn.fit_one_cycle(1)</code>: add a few extra layers to the end, and only train those</li>
-<li><code>learn.save('stage-1')</code>: save the weights names stage-1</li>
-<li><code>learn.unfreeze()</code>: train the whole model</li>
-<li><code>learn.load('stage-1')</code>: load the weights form before</li>
-<li>
-<p><code>learn.lr_find()</code>: how fast can I train without overshooting</p>
-</li>
-<li>
-<p>class interpretation</p>
-</li>
-<li><code>interp = ClassificationInterpretation.from_learner(learn)</code></li>
-<li><code>interp.plot_top_losses(9, figsize=(15,11))</code></li>
-<li><code>interp.most_confused(min_val=2)</code></li>
+<li>train:<ul>
+<li>language model learner with Wikitext 103 weights: <code>learn = language_model_learner(data_lm, AWD_LSTM, drop_mult=0.3)</code></li>
+<li>find learning rate: <code>learn.lr_find()</code>, <code>learn.recorder.plot(skip_end=15)</code></li>
+<li>start fine tune:<code>learn.fit_one_cycle(1, 1e-2, moms=(0.8,0.7))</code>, <code>learn.unfreeze()</code>, <code>learn.fit_one_cycle(10, 1e-3, moms=(0.8,0.7))</code>, <code>learn.save('fine_tuned')</code></li>
 </ul>
+</li>
+</ul>
+<h3 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h3>
+<p>https://builtin.com/data-science/recurrent-neural-networks-powerhouse-language-modeling</p>
 <h2 id="python-modules">python modules<a class="headerlink" href="#python-modules" title="Permanent link">&para;</a></h2>
 <h3 id="pathlib">pathlib<a class="headerlink" href="#pathlib" title="Permanent link">&para;</a></h3>
 <ul>

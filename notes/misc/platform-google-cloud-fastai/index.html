@@ -202,6 +202,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#troubleshoot-not-enough-resource" class="md-nav__link">
+    Troubleshoot not enough resource
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
       
       
       
@@ -224,16 +238,17 @@
                 <h2 id="returning-to-gcp">Returning to GCP<a class="headerlink" href="#returning-to-gcp" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Start instance</li>
+<li>if fail to start due to 'not enough resource', see <a href="#troubleshoot-not-enough-resource">troubleshoot</a></li>
 <li>log into <a href="https://console.cloud.google.com/compute/">console</a></li>
 <li>start instance</li>
-<li>SSH into instance:<ol>
+<li>
+<p>SSH into instance:</p>
+<ol>
 <li><code>gcloud compute ssh --zone "us-west1-b" "my-fastai-instance" --project "project-name"</code></li>
 <li><code>gcloud compute ssh --zone=$ZONE jupyter@$INSTANCE_NAME -- -L 8080:localhost:8080</code></li>
 <li><code>gcloud compute ssh --zone=us-west1-b jupyter@my-fastai-instance -- -L 8080:localhost:8080</code></li>
+<li>go to browser: <code>http://localhost:8080/tree</code></li>
 </ol>
-</li>
-<li>
-<p>go to brower: <code>http://localhost:8080/tree</code></p>
 </li>
 <li>
 <p>Update course repo</p>
@@ -249,14 +264,40 @@
 <p><code>sudo /opt/anaconda3/bin/conda install -c fastai fastai</code></p>
 </li>
 <li>
-<p><code>scp</code> securely copy files from gcp vm back to local: <code>gcloud compute scp --recurse jupyter@my-fastai-instance:~/tutorials/fastai/course-v3/nbs/dl1 /Users/max/Documents/ds-local/ds-fastai</code></p>
+<p><code>scp</code> securely copy files from gcp vm back to local: <code>gcloud compute scp --recurse jupyter@my-fastai-instance-v20200528:~/tutorials/fastai/course-v3/nbs/dl1/lesson3-imdb-max-v20200528.ipynb /Users/max/Documents/ds-local/ds-fastai --zone "us-east1-b"</code></p>
 </li>
 <li>
 <p>When done, <strong>SHUT DOWN</strong> instance!!</p>
 </li>
 </ol>
-<p>Reference:
-1. https://cloud.google.com/sdk/gcloud/reference/compute/scp</p>
+<h2 id="troubleshoot-not-enough-resource">Troubleshoot not enough resource<a class="headerlink" href="#troubleshoot-not-enough-resource" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Try to retry</li>
+<li>Create a new instance
+  ```shell
+  export IMAGE_FAMILY="pytorch-latest-gpu" # or "pytorch-latest-cpu" for non-GPU instances
+  export ZONE="us-east1-b" #or try other zones us-west1-a/b, us-central1-c/f, us-east1-b/c
+  export INSTANCE_NAME="my-fastai-instance-v20200528" # add a date for easy reference
+  export INSTANCE_TYPE="n1-highmem-8" # budget: "n1-highmem-4"</li>
+</ol>
+<p># budget: 'type=nvidia-tesla-T4,count=1'
+  gcloud compute instances create $INSTANCE_NAME \
+          --zone=$ZONE \
+          --image-family=$IMAGE_FAMILY \
+          --image-project=deeplearning-platform-release \
+          --maintenance-policy=TERMINATE \
+          --accelerator="type=nvidia-tesla-p100,count=1" \
+          --machine-type=$INSTANCE_TYPE \
+          --boot-disk-size=200GB \
+          --metadata="install-nvidia-driver=True" #\
+          #--preemptible #disable preemptible when unstable
+    ```</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Google official document: https://cloud.google.com/sdk/gcloud/reference/compute/scp</li>
+<li>Troubleshoot question on stackoverflow: https://stackoverflow.com/questions/52684656/the-zone-does-not-have-enough-resources-available-to-fulfill-the-request-the-re</li>
+<li>fastai setup guide: https://course.fast.ai/start_gcp.html</li>
+</ol>
                 
                   
                 
