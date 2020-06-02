@@ -16,7 +16,8 @@
 3. Update fastai library
   1. `sudo /opt/anaconda3/bin/conda install -c fastai fastai`
 
-4. `scp` securely copy files from gcp vm back to local: `gcloud compute scp --recurse jupyter@my-fastai-instance:~/tutorials/fastai/course-v3/nbs/dl1 /Users/max/Documents/ds-local/ds-fastai`
+4. `scp` securely copy files from gcp vm back to local: `gcloud compute scp --recurse jupyter@my-fastai-instance-v20200528:~/tutorials/fastai/course-v3/nbs/dl1/lesson3-imdb-max-v20200528.ipynb /Users/max/Documents/ds-local/ds-fastai --zone "us-east1-b"`
+
 
 5. When done, **SHUT DOWN** instance!!
 
