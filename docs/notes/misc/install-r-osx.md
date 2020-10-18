@@ -2,14 +2,14 @@
 
 ## R
   1. go to cran.r-project.org
-  2. click on "Download R for (Mac) OS X" ![1](install-r-osx/install-r-osx-1-download-link.png)
+  2. click on "Download R for (Mac) OS X" ![1](install-r-osx/install-r-osx-1-1-download-link.png)
   3. choose the most recent version of the one fits your OSX
-  ![2](install-r-osx/install-r-osx-2-version.png)
+  ![2](install-r-osx/install-r-osx-1-2-version.png)
   4. go through installation process
-  ![3](install-r-osx/install-r-osx-3-install-start.png)
-  ![4-install-finish](install-r-osx/install-r-osx-4-install-finish.png)
-  5. locate R in applications folder ![5-application]
-  6. open R![6-r-console]
+  ![3](install-r-osx/install-r-osx-1-3-install-start.png)
+  ![4-install-finish](install-r-osx/install-r-osx-1-4-install-finish.png)
+  5. locate R in applications folder ![5-application](install-r-osx/install-r-osx-1-5-application.png)
+  6. open R![6-r-console](install-r-osx/install-r-osx-1-6-r-console.png)
 
 ## RStudio
   1. go to rstudio.com
