@@ -40,10 +40,11 @@
 - [git - .gitignore and untrack files](notes/misc/git-gitignore-untrack-files.md)
 - [git - add remote repository on github via commandline](notes/misc/git-add-project-to-GitHub.md)
 
-### Cloud Platform
-- [platform - aws - ec2 data science set up](notes/misc/aws-setup.md)
-- [platform - aws - cli cheatsheet](notes/misc/awscli-cheatsheet.md)
-- [platform - google cloud platform  - fastai](notes/misc/platform-google-cloud-fastai.md)
+### Environment Setup
+- [language - R - install R and RStudio](notes/misc/install-r-osx.md)
+- [cloud platform - aws - ec2 data science set up](notes/misc/aws-setup.md)
+- [cloud platform - aws - cli cheatsheet](notes/misc/awscli-cheatsheet.md)
+- [cloud platform - google cloud platform  - fastai](notes/misc/platform-google-cloud-fastai.md)
 
 ### Miscellaneous
 - [atom text editor - cheatsheet](notes/misc/cheatsheet-atomTextEditor.md)
